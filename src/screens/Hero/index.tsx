@@ -27,7 +27,7 @@ function Rig() {
 export default function App() {
     // const { fonts } = useTheme();
 
-  const [mousePos, setMousePos] = useState({x:10, y:10});
+  const [mousePos, setMousePos] = useState({x:100, y:10});
 
   useEffect(() => {
     const handleMouseMove = (event) => {
