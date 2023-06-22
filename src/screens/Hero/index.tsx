@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react'
+import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { easing } from 'maath'
@@ -17,8 +17,8 @@ function Rig() {
   const vec = new Vector3()
 
   return useFrame(() => {
-    camera.position.lerp(vec.set(mouse.x, mouse.y, camera.position.z), 0.05)
-    camera.lookAt(mouse.x*-10, mouse.y, 50)
+    camera.position.lerp(vec.set(mouse.x, mouse.y, camera.position.z), 1)
+    camera.lookAt(mouse.x*-20, mouse.y, 50)
   })
 }
 
@@ -26,27 +26,9 @@ function Rig() {
 
 export default function App() {
     // const { fonts } = useTheme();
-
-  const [mousePos, setMousePos] = useState({x:100, y:10});
-
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setMousePos({ x: event.clientX, y: event.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener(
-        'mousemove',
-        handleMouseMove
-      );
-    };
-  }, []);
-
-
   return (
-    <Container>
-      <div>mouse pos {mousePos.x}</div>
+    <Container >
+
       <SceneContainer>
         <Suspense fallback={null} >
           <Canvas 
@@ -54,12 +36,12 @@ export default function App() {
             flat 
             linear
             eventPrefix='client'
-            camera={{position: [-10, 0 ,2.5], fov:5050 }}
+            camera={{position: [-1000, 110 ,2.5], fov:5050 }}
           >
             {/* <CameraRig> */}
-            <Scene mousePos={mousePos} faceScale="4.37" elementsScale="1" />
+            <Scene  faceScale="4.37" elementsScale="1" />
             {/* </CameraRig> */}
-            {/* <OrbitControls enableZoom={false} /> */}
+            <OrbitControls enableZoom={false} />
             <Rig />
             
             {/* <Stats /> */}

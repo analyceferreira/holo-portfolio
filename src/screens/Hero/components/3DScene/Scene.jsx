@@ -1,24 +1,22 @@
 import useSpline from '@splinetool/r3f-spline'
 import { OrthographicCamera } from '@react-three/drei'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { Color } from 'three'
 import { useFrame } from '@react-three/fiber'
 
 
 
-export default function Scene({mousePos, ...props }) {
+export default function Scene({ ...props }) {
   const { nodes, materials } = useSpline('https://prod.spline.design/4G1xK7WAnLZN-vua/scene.splinecode')
   
   const ref = useRef()
   const ref2 = useRef()
   const ref3 = useRef()
   const ref4 = useRef()
-  const ref5 = useRef()
-  const [hovered, setHovered] = useState(false)
 
   useFrame(({ mouse, viewport }) => {
-    const x = (mousePos.x * viewport.width) / 2.5
-    const y = (mousePos.y * viewport.height) / 2.5
+    const x = (mouse.x * viewport.width) / 2.5
+    const y = (mouse.y * viewport.height) / 2.5
     ref.current.lookAt(x /3, y/2, 1)
     ref2.current.lookAt(x*-8, y*-8, 1)
     ref3.current.lookAt(x/3, y/2, 1)
@@ -27,7 +25,6 @@ export default function Scene({mousePos, ...props }) {
   
   return (
     <>
-    
       <group {...props} rotateX={0.4} dispose={null}>
         <mesh
           name="Dodecahedron"
@@ -39,8 +36,6 @@ export default function Scene({mousePos, ...props }) {
           rotation={[0.02, -0.02, 0]}
 
           ref={ref}
-          onPointerOver={() => setHovered(true)}
-          onPointerOut={() => setHovered(false)}
         />
         <mesh
           name="Sphere"

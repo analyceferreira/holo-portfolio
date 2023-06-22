@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
     height: 100%;
+    width: 450px;
     background-color: ${({theme})=>theme.colors.success };
     position: relative;
 `
