@@ -10,14 +10,27 @@ let pallet = {
     gray600: '#717E95',
     gray700: '#475663',
     
-    blue300: '#2C4D69',
+    blue200: '#C5E3DB',
+    blue250: '#3bb9c9',
+    blue300: '#60A1D3',
+    blue400: '#253875',
+    blue500: '#2C4D69',
     blue600: '#223A4F',
-    blue900: '#0D1F2F',
+    blue900: '#11183E',
 
+    violet100: '#f8f4ff',
+    violet200: '#dbdeff',
     violet300: '#D6D0E2',
+    violet400: '#85A0CA',
+    violet600: '#988DBE',
+    violet700: '#8185BB',
+    violet900: '#585360',
+
+    transparentViolet700Strong: 'rgba(129,133,187,.99)',
+    transparentViolet700Soft: 'rgba(129,133,187,.05)',
     
-    yellow100: '#FED186',
-    yellow200: '#FEC876',
+    yellow100: '#FAEBD7',
+    yellow200: '#E9E1DA',
     yellow300: '#FFC979',
     yellow500: '#FD9F02',
     yellowBrownOp30: 'rgba(254, 200, 118, 0.3)',
@@ -25,6 +38,7 @@ let pallet = {
     red: '#ED5757',
     softRed: 'rgba(237, 87, 87,0.7)',
     green: '#8AC083',
+    transparent: 'transparent',
 }
 
 export default pallet;
