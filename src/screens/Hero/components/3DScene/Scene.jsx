@@ -22,6 +22,8 @@ export default function Scene({ ...props }) {
     ref3.current.lookAt(x/3, y/2, 1)
     ref4.current.lookAt(x , y/2, 1)
   })
+
+  let facePartsPositions = [4, -384, -60]
   
   return (
     <>
@@ -32,8 +34,9 @@ export default function Scene({ ...props }) {
           material={materials.Holo}
           castShadow
           receiveShadow
-          position={[-146.95, 186.06, 12.49]}
+          position={[-176.95, 186.06, 12.49]}
           rotation={[0.02, -0.02, 0]}
+          scale={props.elementsScale}
 
           ref={ref}
         />
@@ -43,7 +46,7 @@ export default function Scene({ ...props }) {
           material={materials['Holo Material']}
           castShadow
           receiveShadow
-          position={[144.07, 109.08, 117.38]}
+          position={[214.07, 109.08, 117.38]}
           rotation={[0.02, -0.02, -0.01]}
           scale={props.elementsScale}
           ref={ref2}
@@ -55,8 +58,8 @@ export default function Scene({ ...props }) {
           material={materials['Holo Material']}
           castShadow
           receiveShadow
-          position={[-198.91, -85.46, 86.91]}
-          rotation={[0.02, -0.02, 0]}
+          position={[-218.91, -85.46, 86.91]}
+          rotation={[0.2, -0.02, 0]}
           scale={props.elementsScale}
           ref={ref3}
 
@@ -67,18 +70,18 @@ export default function Scene({ ...props }) {
           material={materials['Holo Material']}
           castShadow
           receiveShadow
-          position={[182.48, -75.29, 65.48]}
+          position={[242.48, -75.29, 65.48]}
           scale={props.elementsScale}
           ref={ref4}
         />
-        <group name="Group 2" position={[-10, 27, 239]} rotation={[-0.06, 0, 0]} scale={props.faceScale}>
+        <group name="Group 2" position={[0, 27, 239]} rotation={[0, 0, 0]} scale={props.faceScale}>
           <mesh
             name="EyeLeft"
             geometry={nodes.EyeLeft.geometry}
             material={nodes.EyeLeft.material}
             castShadow
             receiveShadow
-            position={[0.7, -379.5, -60]}
+            position={facePartsPositions}
             scale={4.33}
           />
           <mesh
@@ -87,7 +90,7 @@ export default function Scene({ ...props }) {
             material={nodes.Wolf3D_Hair.material}
             castShadow
             receiveShadow
-            position={[0.7, -379.5, -60]}
+            position={facePartsPositions}
             scale={4.33}
           />
           <mesh
@@ -96,7 +99,7 @@ export default function Scene({ ...props }) {
             material={nodes.EyeRight.material}
             castShadow
             receiveShadow
-            position={[0.7, -379.5, -60]}
+            position={facePartsPositions}
             scale={4.33}
           />
           <mesh
@@ -104,7 +107,7 @@ export default function Scene({ ...props }) {
             geometry={nodes.Wolf3D_Head.geometry}
             material={nodes.Wolf3D_Head.material}
             castShadow
-            position={[0.7, -379.5, -60]}
+            position={facePartsPositions}
             scale={4.33}
           />
           <mesh
@@ -113,7 +116,7 @@ export default function Scene({ ...props }) {
             material={nodes.Wolf3D_Teeth.material}
             castShadow
             receiveShadow
-            position={[0.7, -379.5, -60]}
+            position={facePartsPositions}
             scale={4.33}
           />
         </group>
@@ -137,7 +140,7 @@ export default function Scene({ ...props }) {
           zoom={0.9}
           far={100000}
           near={-1000}
-          position={[500, -303.79, 1239.28]}
+          position={[50, -33.79, 2539.28]}
           scale={props.scale}
 
         />
