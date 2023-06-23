@@ -29,9 +29,10 @@ const darkTheme: DefaultTheme = {
 
         background: pallet.gray100,
 
-        error:  pallet.red,
-        softError:  pallet.softRed,
-        success:  pallet.green,
+        error: pallet.red,
+        softError: pallet.softRed,
+        success: pallet.green,
+        transparent: pallet.transparent,
     },
 
 
@@ -51,6 +52,7 @@ const darkTheme: DefaultTheme = {
         m: '20px',
         l: '30px',
         xl: '60px',
+        content: '1200px',
     },
 
     shadows: {

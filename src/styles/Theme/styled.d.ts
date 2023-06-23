@@ -6,11 +6,11 @@ export interface ITextVariants {
     h3: string,
     h4: string,
     h5: string,
-    h1regular: string,
-    h2regular: string,
-    h3regular: string,
-    h4regular: string,
-    h5regular: string,
+    heading1: string,
+    heading2: string,
+    heading3: string,
+    heading4: string,
+    heading5: string,
     button: string,
     smallButton: string,
     paragraph: string,
@@ -51,6 +51,7 @@ declare module 'styled-components' {
             error: string;
             softError: string;
             success: string;
+            transparent:string,
         };
 
         fontSizes: {
@@ -69,6 +70,7 @@ declare module 'styled-components' {
             m: string;
             l: string;
             xl: string;
+            content: string;
         };
 
         shadows: {

@@ -4,14 +4,14 @@ import fonts from './fonts';
 
 export const lightTheme: DefaultTheme = {
     colors: {
-        primary: pallet.yellow500,
-        secondary: pallet.yellow200,
-        tertiary: pallet.yellowBrownOp30,
+        primary: pallet.violet700,
+        secondary: pallet.blue300,
+        tertiary: pallet.blue400,
 
-        contrast: pallet.black,
-        contrastSecondary: pallet.white,
+        contrast: pallet.blue600,
+        contrastSecondary: pallet.blue250,
 
-        intensity100: pallet.gray100,
+        intensity100: pallet.violet100,
         intensity200: pallet.gray200,
         intensity300: pallet.gray300,
         intensity400: pallet.gray400,
@@ -21,15 +21,16 @@ export const lightTheme: DefaultTheme = {
         intensity800: pallet.blue600,
         intensity900: pallet.blue900,
 
-        primaryGradient: 'linear-gradient(180deg, ' + pallet.yellow300 + ' 0%, ' + pallet.yellow500 + ' 100%)',
-        secondaryGradient: 'linear-gradient(180deg, ' + pallet.yellow100 + ' 0%, ' + pallet.yellow500 + ' 100%)',
-        contrastGradient: 'linear-gradient(180deg, ' + pallet.blue600 + ' 0%, ' + pallet.blue900 + ' 65.1%)',
+        primaryGradient: 'linear-gradient(180deg, #F8F7FF 0%, ' + pallet.yellow200 + ' 100%)',
+        secondaryGradient: 'linear-gradient(180deg, ' + pallet.violet200 + ' 0%, ' + pallet.transparent  + ' 100%)',
+        contrastGradient: 'linear-gradient(90deg, ' + pallet.blue400 + ' 0%, ' + pallet.violet300 + ' 50%, ' + pallet.blue250 + ' 100%)',
 
         background: pallet.violet300,
 
         error:  pallet.red,
         softError:  pallet.softRed,
         success:  pallet.green,
+        transparent: pallet.transparent,
     },
 
 
@@ -49,6 +50,7 @@ export const lightTheme: DefaultTheme = {
         m: '20px',
         l: '30px',
         xl: '60px',
+        content: '1200px',
     },
 
     shadows: {
