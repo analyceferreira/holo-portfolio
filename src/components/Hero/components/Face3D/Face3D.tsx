@@ -30,8 +30,9 @@ export default function Face3D() {
             flat
             linear
             eventPrefix='client'
+            style={{ width: "100%" }}
           >
-            <Scene faceScale="5.37" elementsScale="1.4" />
+            <Scene faceScale="6.37" elementsScale="1.4" />
             <OrbitControls enableZoom={false} />
             <RigCamera />
             {/* <Stats /> */}
