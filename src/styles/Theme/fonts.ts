@@ -2,7 +2,7 @@ import { ITextVariants } from "./styled";
 
 const fonstFamilys = {
     principal: 'degular',
-    secondary: 'Montserrat',
+    secondary: 'inter',
 }
 
 const sizes = {
@@ -54,9 +54,9 @@ const textVariants: ITextVariants = {
         font-size: ` + sizes.xm +`;
         letter-spacing: -1px;`,
     heading5: `font-family: ` + fonstFamilys.secondary +`;
-        font-weight: 700;        
+        font-weight: 600;        
         font-size: ` + sizes.m +`;
-        letter-spacing: -1px;`,
+        letter-spacing: -0.5px;`,
                 
     button:`font-family: ` + fonstFamilys.principal +`;
         font-weight: 700;    

@@ -39,7 +39,8 @@ export const Logo = styled.h1`
 
 export const MenuButton = styled.a`
     ${({ theme}) => css`
-        ${theme.textVariants.paragraph};
+        ${theme.textVariants.heading5};
+        /* color: ${theme.colors.tertiary}; */
         width: fit-content;
         min-width: max-content;
 
@@ -48,8 +49,7 @@ export const MenuButton = styled.a`
 
         &:hover {
             color: ${theme.colors.tertiary};
-            font-weight: 600;
-            letter-spacing: -.125px;
+            /* letter-spacing: -.125px; */
     
             &::after{
                 content: '';

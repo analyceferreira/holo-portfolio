@@ -11,7 +11,7 @@ export default  createGlobalStyle`
 
     #root {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background: ${(props) => props.theme.colors.primaryGradient};
     }
     .container {
