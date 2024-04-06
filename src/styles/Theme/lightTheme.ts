@@ -4,12 +4,13 @@ import fonts from './fonts';
 
 export const lightTheme: DefaultTheme = {
     colors: {
-        primary: pallet.violet700,
+        primary: '#0ec0c7',
         secondary: pallet.blue300,
         tertiary: pallet.blue400,
 
-        contrast: pallet.blue600,
-        contrastSecondary: pallet.blue250,
+        contrast: pallet.blue900,
+        contrastSecondary: pallet.white,
+        contrastTertiary: pallet.blue250,
 
         intensity100: pallet.violet100,
         intensity200: pallet.gray200,
@@ -63,5 +64,7 @@ export const lightTheme: DefaultTheme = {
     },
 
     textVariants: fonts.textVariants,
+
+    fontFamilys: fonts.fontFamilys,
 };
 

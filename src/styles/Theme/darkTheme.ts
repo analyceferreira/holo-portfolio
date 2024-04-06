@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 import pallet from './pallet';
-import { ITextVariants } from "./styled";
+import { ITextVariants, IFontFamilys } from "./styled";
 import fonts from './fonts';
 
 
@@ -12,6 +12,7 @@ const darkTheme: DefaultTheme = {
 
         contrast: pallet.white,
         contrastSecondary: pallet.black,
+        contrastTertiary: pallet.black,
 
         intensity100: pallet.blue900,
         intensity200: pallet.blue600,
@@ -65,5 +66,7 @@ const darkTheme: DefaultTheme = {
     },
 
     textVariants: fonts.textVariants,
+
+    fontFamilys: fonts.fontFamilys,
 };
 export {darkTheme};

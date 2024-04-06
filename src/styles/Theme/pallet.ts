@@ -26,6 +26,8 @@ let pallet = {
     violet700: '#8185BB',
     violet900: '#585360',
 
+    pink100: '#E54D7D',
+
     transparentViolet700Strong: 'rgba(129,133,187,.99)',
     transparentViolet700Soft: 'rgba(129,133,187,.05)',
     
@@ -33,6 +35,7 @@ let pallet = {
     yellow200: '#E9E1DA',
     yellow300: '#FFC979',
     yellow500: '#FD9F02',
+    yellow600: '#FD8907',
     yellowBrownOp30: 'rgba(254, 200, 118, 0.3)',
     
     red: '#ED5757',

@@ -5,7 +5,7 @@ export const Content = styled.div`
         max-width: ${theme.spacings.content};
         /* background-color: aqua; */
         width: 100%;
-        height: 100%;
+        height: 50%;
         z-index: 5;
     `};
 `;

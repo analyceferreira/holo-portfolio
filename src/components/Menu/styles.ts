@@ -4,11 +4,11 @@ export const BackgroundContainer = styled.div`
     ${({ theme }) => css`
         height: 70px;
         width: 100%;
-        background: ${theme.colors.secondaryGradient};
         padding-bottom: 10px;
-        
+
         display: flex;
         justify-content: center;
+        align-items: center;
         position: fixed;
         z-index: 99;
     `};
@@ -17,7 +17,6 @@ export const BackgroundContainer = styled.div`
 
 export const MenuContainer = styled.div`
     ${({ theme }) => css`
-        height: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -28,7 +27,7 @@ export const MenuContainer = styled.div`
 export const Logo = styled.h1`
     ${({ theme}) => css`
         width: 100%;
-        ${theme.textVariants.h2};
+        ${theme.textVariants.h5};
 
         background-image: url("src/assets/images/texture2.jpg");
         background-repeat: repeat;
@@ -40,7 +39,7 @@ export const Logo = styled.h1`
 export const MenuButton = styled.a`
     ${({ theme}) => css`
         ${theme.textVariants.heading5};
-        /* color: ${theme.colors.tertiary}; */
+        /* color: ${theme.colors.contrast}; */
         width: fit-content;
         min-width: max-content;
 
@@ -59,8 +58,7 @@ export const MenuButton = styled.a`
                 left: 50%;
 	            transform: translatex(-50%);
                 width: 100%;
-                height: 2px;
-                border-radius:50%;
+                height: 4px;
             }
         }
     `};
@@ -70,18 +68,19 @@ export const MenuButton = styled.a`
 export const ContactButton = styled.button`
     ${({ theme}) => css`
         width: 100%;
-        padding: 5px 10px;
-        ${theme.textVariants.paragraph};
+        padding: 5px 12px;
+        ${theme.textVariants.heading5};
 
-        border: 1px solid ${theme.colors.contrast};
+        border: none;
         border-radius: 20px;
         background: none;
         cursor: pointer;
+        background-color: ${theme.colors.contrast};
+        color: ${theme.colors.intensity100};
 
         
         &:hover {
-            color: ${theme.colors.intensity100};
-            background-color: ${theme.colors.tertiary};
+            background-color: ${theme.colors.primary};
         }
     `};
 `;
@@ -93,6 +92,6 @@ export const ButtonsMenuContainer = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        gap: 24px;
     `};
 `;

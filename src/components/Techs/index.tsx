@@ -29,7 +29,7 @@ export default function Techs({ data }) {
         <BackgroundContainer >
             <PageContent>
                 <Container>
-                    <Title>Technologies</Title>
+                    {/* <Title>Technologies</Title> */}
                     <TechsContainer>
                         {items}
                     </TechsContainer>

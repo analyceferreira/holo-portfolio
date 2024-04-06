@@ -3,6 +3,7 @@ import React from 'react'
 import Hero from '../../components/Hero'
 import Menu from '../../components/Menu';
 import Techs from '../../components/Techs';
+import Techs2 from '../../components/Techs2';
 import BgTexture from '../../components/BgTexture';
 import { Container } from './styles.ts';
 
@@ -15,7 +16,8 @@ export default function Home() {
     <Container>
       <Menu />
       <Hero />
-      <Techs data={techs} />
+      <Techs2 data={techs} />
+      {/* <Techs data={techs} /> */}
       {/* <BgTexture/> */}
     </Container>
   )

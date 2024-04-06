@@ -1,8 +1,9 @@
+import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components'
 
 
-export const Container = styled.div`
-    height: 700px;
+export const Container = styled(motion.div)`
+    height: 600px;
     width: 100%;
     position: relative;
     display: flex;
@@ -11,16 +12,18 @@ export const Container = styled.div`
     align-items: center;
 
     margin-top: 60px;
-    padding: 0 100px 0 100px;
+    padding: 0px 140px 0 0;
 `;
 
 export const TextContainer = styled.div`
     ${({ theme }) => css`
         max-width: min-content;
+        width: 700px;
         display: flex;
         flex-direction: column;
         gap: 24px;
-        margin-bottom: 90px;
+        position: relative;
+        right: -17%;
     `};
 `;
 
@@ -32,20 +35,42 @@ export const TitleContainer = styled.div`
     `};
 `;
 
-export const Title = styled.h1`
+// export const Title = styled.h1`
+//     ${({ theme}) => css`
+//         background-image: url("src/assets/images/texture2.jpg");
+//         background-repeat: repeat;
+//         -webkit-background-clip: text;
+//         -webkit-text-fill-color: transparent;
+//         ${theme.textVariants.h1};
+//         line-height: 84px;
+//     `};
+// `;
+export const Title = styled(motion.h1)`
     ${({ theme}) => css`
-        background-image: url("src/assets/images/texture2.jpg");
-        background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        ${theme.textVariants.h1};
-        line-height: 84px;
+        ${theme.textVariants.h2};
+        color: ${theme.colors.contrast};
+        line-height: 70px;
     `};
 `;
 
+
+export const TitleBar = styled(motion.h1)`
+    ${({ theme}) => css`
+        ${theme.textVariants.h3};
+        color: ${theme.colors.contrast};
+        line-height: 75px;
+    `};
+`;
+
+
 export const SubTitle = styled.p`
     ${({ theme }) => css`
-        ${theme.textVariants.heading3};
-        color: ${theme.colors.primary};
+        ${theme.textVariants.heading4};
+        width: fit-content;
+        padding: 4px 10px;
+        background: ${theme.colors.intensity900};
+        border-radius: 50px;
+        border: .5px solid ${theme.colors.contrastSecondary};
+        color: ${theme.colors.intensity100};
     `};
 `;

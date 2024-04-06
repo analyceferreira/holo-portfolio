@@ -5,5 +5,6 @@ export const Container = styled.div`
 `;
 
 export const SceneContainer  =  styled.div`
-    height: 640px;
+    margin-top: 100px;
+    height: 712px;
 `;

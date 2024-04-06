@@ -5,6 +5,8 @@ export const BackgroundContainer = styled.div`
         width: 100%;
         height: 200px;
         padding-bottom: 10px;
+        position:relative;
+        top: -160px;
         
         display: flex;
         justify-content: center;
@@ -16,6 +18,7 @@ export const Container = styled.div`
         width: 100%;
         height: 100%;
         display: flex;
+
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -40,6 +43,7 @@ export const TechsContainer = styled.div`
         display: flex;
         justify-content: space-around;
         align-items: center;
+        background-color: ${theme.colors.contrast};
 
         padding: 10px 5%;
         border: 1px solid ${theme.colors.primary};
@@ -60,6 +64,6 @@ export const TechNames = styled.a`
         min-width: max-content;
         position: relative;
 
-        color: ${theme.colors.primary};
+        color: ${theme.colors.contrastSecondary};
     `};
 `;

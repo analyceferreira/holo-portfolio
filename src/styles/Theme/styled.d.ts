@@ -1,5 +1,11 @@
 import 'styled-components'
 
+export interface IFontFamilys {
+    primary: string;
+    secondary: string;
+    tertiary: string;
+}
+
 export interface ITextVariants {
     h1: string,
     h2: string,
@@ -31,7 +37,8 @@ declare module 'styled-components' {
 
             contrast: string;
             contrastSecondary: string;
-
+            contrastTertiary: string;
+            
             intensity100: string;
             intensity200: string;
             intensity300: string;
@@ -83,5 +90,7 @@ declare module 'styled-components' {
         };
 
         textVariants: ITextVariants;
+
+        fontFamilys: IFontFamilys;
     }
 }

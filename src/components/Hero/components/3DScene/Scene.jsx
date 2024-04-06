@@ -23,10 +23,10 @@ export default function Scene({ ...props }) {
     ref4.current.lookAt(x , y/2, 1)
   })
 
-  let facePartsPositions = [4, -384, -60]
+  let facePartsPositions = [0, -384, -60]
   
   return (
-    <group {...props} rotateX={0.4} dispose={null} style="width:100%">
+    <group {...props} rotateX={0} dispose={null} style="width:100%">
       <mesh
         name="Dodecahedron"
         geometry={nodes.Dodecahedron.geometry}
@@ -136,10 +136,10 @@ export default function Scene({ ...props }) {
       <OrthographicCamera
         name="1"
         makeDefault={true}
-        zoom={0.9}
+        zoom={0.9 }
         far={100000}
         near={-1000}
-        position={[50, -33.79, 2539.28]}
+        position={[0, 0, 0]}
         scale={props.scale}
       />
       <hemisphereLight name="Default Ambient Light" intensity={0.75} color="#eaeaea" />

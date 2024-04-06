@@ -1,19 +1,22 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export default  createGlobalStyle`
     * {
         box-sizing: border-box;
         margin: 0;
         outline: 0;
-        transition: 0.1s;
         color: ${props => props.theme.colors.contrast};      
     }
 
-    #root {
-        width: 100%;
-        height: 100%;
-        background: ${(props) => props.theme.colors.primaryGradient};
+    body {
+        font-family: ${props => props.theme.fontSizes}, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
     }
+
+    #root {
+    }
+
     .container {
         margin: auto;
         width: 50%;        
@@ -30,7 +33,20 @@ export default  createGlobalStyle`
         --gradient-color-3: #eae2ff;  
         --gradient-color-4: #dbdeff;
     }
-    
 
+    bgNoise {
+        width: 100vw;
+        height: 100%;
+        background: ${(props) => props.theme.colors.primaryGradient};
+        background-image: url(/src/assets/images/noise-texture.jpg);
+        background-size: 110%;
+        background-position: center;
+        position: fixed;
+        opacity: 0.1;
+        top: 0%;
+        left: 0;
+        z-index: 1;
+        mix-blend-mode: multiply;
+    }
 
 `
