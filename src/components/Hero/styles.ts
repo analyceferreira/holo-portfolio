@@ -12,7 +12,7 @@ export const Container = styled(motion.div)`
     align-items: center;
 
     margin-top: 60px;
-    padding: 0px 140px 0 0;
+    padding: 20px 100px 0 0;
 `;
 
 export const TextContainer = styled.div`
@@ -21,9 +21,10 @@ export const TextContainer = styled.div`
         width: 700px;
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 10px;
         position: relative;
         right: -17%;
+        top: -5%;
     `};
 `;
 
@@ -66,8 +67,8 @@ export const TitleBar = styled(motion.h1)`
 export const SubTitle = styled.p`
     ${({ theme }) => css`
         ${theme.textVariants.heading4};
-        width: fit-content;
-        padding: 4px 10px;
+        width: max-content;
+        padding: 5px 10px;
         background: ${theme.colors.intensity900};
         border-radius: 50px;
         border: .5px solid ${theme.colors.contrastSecondary};

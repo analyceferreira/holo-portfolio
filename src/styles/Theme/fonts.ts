@@ -2,38 +2,37 @@ import { ITextVariants } from "./styled";
 
 const fontFamilys = {
     primary: 'Bricolage Grotesque',
-    secondary: 'carlito ',
+    secondary: 'inter ',
     tertiary: 'roboto',
 }
 
 const sizes = {
-    xs: '12px',
-    s: '14px',
-    m: '18px',
-    xm: '22px',
-    l: '38px',
+    xs: '10px',
+    s: '12px',
+    m: '15px',
+    xm: '18px',
+    l: '26px',
     xl: '38px',
     xxl: '64px',
-    xxxl: '78px',
-    xxxxl: '104px',
+    xxxl: '68px',
 }
 
 const textVariants: ITextVariants = {
     h1:`font-family:` + fontFamilys.primary + `;
         font-weight: 500;
-        font-size: ` + sizes.xxxxl + `;
+        font-size: ` + sizes.xxxl + `;
         letter-spacing: 0; `,
     h2:`font-family: ` + fontFamilys.primary +`; 
         font-weight: 700;
-        font-size: ` + sizes.xxxl + `;
+        font-size: ` + sizes.xxl + `;
         letter-spacing: 0;`,
     h3:`font-family: ` + fontFamilys.primary +`;
         font-weight: 700;
-        font-size: ` + sizes.xxl +`;
+        font-size: ` + sizes.xl +`;
         letter-spacing: 0;`,
     h4:`font-family: ` + fontFamilys.primary +`;
         font-weight: 700;
-        font-size: ` + sizes.xl+`;
+        font-size: ` + sizes.l+`;
         letter-spacing: 0;`,
     h5:`font-family: ` + fontFamilys.primary +`;
         font-weight: 700;
@@ -42,11 +41,11 @@ const textVariants: ITextVariants = {
 
     heading1: `font-family: ` + fontFamilys.secondary +`;
         font-weight: 700;        
-        font-size: ` + sizes.xxxxl +`;
+        font-size: ` + sizes.xxxl +`;
         letter-spacing: -1px;`,
     heading2: `font-family: ` + fontFamilys.secondary +`;
         font-weight: 700;        
-        font-size: ` + sizes.xxxl +`;
+        font-size: ` + sizes.xxl +`;
         letter-spacing: -1px;`,
     heading3: `font-family: ` + fontFamilys.secondary +`;
         font-weight: 300;        
@@ -70,12 +69,12 @@ const textVariants: ITextVariants = {
         font-size: ` + sizes.m +`;
         letter-spacing: 0;`,
     largeParagraph: `font-family: ` + fontFamilys.secondary +`;
-        font-weight: 700;        
+        font-weight: 400;        
         font-size: ` + sizes.xm +`;
         letter-spacing: 0;`,
     paragraph: `font-family: ` + fontFamilys.secondary +`;
-        font-weight: 500;        
-        font-size: ` + sizes.s +`;
+        font-weight: 400;        
+        font-size: ` + sizes.m +`;
         letter-spacing: 0;`,
     smallParagraph:`font-family: ` + fontFamilys.secondary +`;
         font-weight: 400;            
@@ -83,7 +82,7 @@ const textVariants: ITextVariants = {
             letter-spacing: 0;`,
 
     xSmallParagraph:`font-family: ` + fontFamilys.secondary +`;
-        font-weight: 700;            
+        font-weight: 400;            
         font-size: ` + sizes.s +`;
                     letter-spacing: 0;`,
     caption:`font-family: ` + fontFamilys.secondary +`;

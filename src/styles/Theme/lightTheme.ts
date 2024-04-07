@@ -4,22 +4,22 @@ import fonts from './fonts';
 
 export const lightTheme: DefaultTheme = {
     colors: {
-        primary: '#0ec0c7',
+        primary: '#6d8fd9',
         secondary: pallet.blue300,
         tertiary: pallet.blue400,
 
         contrast: pallet.blue900,
         contrastSecondary: pallet.white,
-        contrastTertiary: pallet.blue250,
+        contrastTertiary: '#4f46e5',
 
         intensity100: pallet.violet100,
         intensity200: pallet.gray200,
         intensity300: pallet.gray300,
-        intensity400: pallet.gray400,
+        intensity400: pallet.violet400,
         intensity500: pallet.gray500,
         intensity600: pallet.gray600,
-        intensity700: pallet.blue300,
-        intensity800: pallet.blue600,
+        intensity700: pallet.blue600,
+        intensity800: pallet.blue800,
         intensity900: pallet.blue900,
 
         primaryGradient: 'linear-gradient(180deg, #F8F7FF 0%, ' + pallet.yellow200 + ' 100%)',

@@ -15,13 +15,16 @@ export default  createGlobalStyle`
     }
 
     #root {
+        overflow-x: hidden;
     }
 
     .container {
         margin: auto;
         width: 50%;        
         padding: 10px;
-        text-align: center;        
+        text-align: center;  
+        overflow-x: hidden;
+
     }
 
             

@@ -4,11 +4,12 @@ import { OrbitControls } from '@react-three/drei'
 import { Stats } from '@react-three/drei'
 import { Euler, Vector3 } from 'three'
 
-import Scene from '../3DScene/Scene'
-import NewScene from '../3DScene/NewScene'
+// import Scene from '../3DScene/Scene'
+// import NewScene from '../3DScene/NewScene'
 
 import { Container, SceneContainer } from './styles.js'
 import { MathUtils } from 'three';
+import Spline from '@splinetool/react-spline'
 
 
 
@@ -55,21 +56,7 @@ export default function Face3D() {
     <Container >
       <SceneContainer>
         <Suspense >
-          <Canvas
-            shadows
-            flat
-            linear
-            eventPrefix='client'
-            style={{ width: "100%" }}
-          >
-            {/* <NewScene /> */}
-            <Spline scene="https://prod.spline.design/xwgjuT3XdlHHXEnb/scene.splinecode" />
-  );
-            {/* <Scene faceScale="7.37" elementsScale={1.4 * (mousePos.x * .0009)} /> */}
-            {/* <OrbitControls enableZoom={false} /> */}
-            {/* <RigCamera /> */}
-            {/* <Stats /> */}
-          </Canvas>
+          <Spline scene="https://prod.spline.design/xwgjuT3XdlHHXEnb/scene.splinecode" />
         </Suspense>
       </SceneContainer>
     </Container>
