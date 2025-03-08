@@ -1,28 +1,43 @@
 import React, { useEffect } from 'react'
 
-import { Container, Title, SubTitle, TitleContainer, AboutContent, ImageContainer, ButtonsContainer } from './styles'
+import { Container, SubTitle, TitleContainer, AboutContent, ImageContainer, ButtonsContainer } from './styles'
 import { Content } from '../PageContent/styles'
-import { motion, animate, useMotionValue, useTransform } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
-import AboutDetatils from './Components/AboutDetatils';
 import InfoContainer from './Components/InfoContainer';
+import { useInView } from 'react-intersection-observer';
+import { TitleSections } from '../../App/styles';
 
 
 
-export default function About() {
+export default function About() {    
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  const variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   const [selected, setSelected] = React.useState('code')
 
   const handleChangeSelected = (selected: string) => {
     setSelected(selected)
   }
-
-
   
   return (
     <Content>
-      <Container>
+      <Container 
+        id="about"
+        className="about"
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 1 }}
+      >
         <TitleContainer>
-          <Title>Know About Me</Title>
+          <TitleSections>Know About Me</TitleSections>
         </TitleContainer>
         <ButtonsContainer>
           <SubTitle

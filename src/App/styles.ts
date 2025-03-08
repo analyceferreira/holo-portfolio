@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
@@ -20,6 +21,31 @@ export const ContainerBg = styled.div`
     flex-direction: column;
     align-items: center;
     z-index: 0;
+`;
+
+export const TitleSections = styled(motion.h1)`
+    ${({ theme}) => css`
+        width: max-content;
+        ${theme.textVariants.h3};
+        color: ${theme.colors.contrast};
+        position: relative;
+
+        &::before {
+            content:'';
+            background: url("src/assets/images/tl3.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 20px;
+            position: absolute;
+            bottom: -5px;
+            right: -35px;
+
+            font-size: 20px;
+
+            color: ${theme.colors.contrastTertiary};
+        }
+    `};
 `;
 
 

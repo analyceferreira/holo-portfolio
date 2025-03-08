@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components'
 
 
-export const Container = styled(motion.div)`
+export const Container = styled(motion.section)`
     position: relative;
     height: 600px;
     width: 100%;
@@ -23,32 +23,6 @@ export const TitleContainer = styled.div`
         gap: 14px;
     `};
 `;
-
-export const Title = styled(motion.h1)`
-    ${({ theme}) => css`
-        width: max-content;
-        ${theme.textVariants.h3};
-        color: ${theme.colors.contrast};
-        position: relative;
-
-        &::before {
-            content:'';
-            background: url("src/assets/images/tl3.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 40px;
-            height: 20px;
-            position: absolute;
-            bottom: -5px;
-            right: -35px;
-
-            font-size: 20px;
-
-            color: ${theme.colors.contrastTertiary};
-        }
-    `};
-`;
-
 
 export const ButtonsContainer = styled.div`
     ${({ theme }) => css`

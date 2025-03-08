@@ -1,40 +1,34 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Face3D from './components/Face3D/Face3D'
 import { Container, Title, SubTitle, TextContainer, TitleContainer, TitleBar } from './styles'
 import { Content } from '../../components/PageContent/styles'
-import { motion, animate, useMotionValue, useTransform } from 'framer-motion';
-
-
 
 export default function Hero() {
-  const baseText = "Dear Hiring Manager, " as string;
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => Math.round(latest));
-  const displayText = useTransform(rounded, (latest) =>
-    baseText.slice(0, latest)
-  );
-
-  useEffect(() => {
-    const controls = animate(count, baseText.length, {
-      type: "tween",
-      duration: 1,
-      ease: "easeInOut",
-    });
-    return controls.stop();
-  }, []);
+    const [typedTitle, setTypedTitle] = useState('')
+    const titleText = "Hi, I'm Analyce Ferreira"
   
+    useEffect(() => {
+      let currentIndex = 0
+      const intervalId = setInterval(() => {
+        if (currentIndex < titleText.length - 1) {
+          setTypedTitle((prevTitle) => prevTitle + titleText[currentIndex])
+          currentIndex++
+        }
+      }, 100)
+  
+      return () => {
+        clearInterval(intervalId)
+      }
+    }, [])
+
   return (
-    <Content>
-      <Container 
-        animate={{ scale: 1.1 }} 
-        transition={{ duration: .3 }} 
-      >
+    <Content id="hero" >
+      <Container>
         <Face3D></Face3D>
         <TextContainer>
           <TitleContainer>
-            <Title>Hi, I'm Analyce Ferreira</Title>
-            <motion.span>{displayText}</motion.span>
+            <Title>{titleText}</Title>
             <TitleBar
               transition={{ repeat: Infinity, duration: 0.8, repeatType: "reverse"}}
               animate={{ opacity: [1, 0] }}

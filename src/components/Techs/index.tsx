@@ -1,40 +1,110 @@
-import React from 'react'
+import { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  useVelocity,
+  useAnimationFrame
+} from "framer-motion";
+import { wrap } from "@motionone/utils";
+import React from "react";
+import { Parallax, Separator } from "./styles";
 
-import { BackgroundContainer, TechsContainer, TechNames, Divider, Title, Container } from './styles'
-import PageContent from '../PageContent/index'
+interface ParallaxProps {
+  children: React.ReactNode;
+  baseVelocity: number;
+  className?: string;
+}
 
+function ParallaxText({ children, className, baseVelocity = 100 }: ParallaxProps) {
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 40
+  });
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 20], {
+    clamp: false
+  });
 
-export default function Techs({ data }) {
+  /**
+   * This is a magic wrapping for the length of the text - you
+   * have to replace for wrapping that works for you or dynamically
+   * calculate
+   */
+  const x = useTransform(baseX, (v) => `${wrap(-1, 15.7, v)}%`);
 
-    const items = data.map((item, index) => {
-        const a = index % 2
-        if ((index + 1) < data.length) {
-            return (
-                <>
-                    <TechNames>{item}</TechNames>
-                    <Divider />
-                </>
-            )
-        }
-        else {
-            return (
-                <>
-                    <TechNames>{item}</TechNames>
-                </>
-            )
-        }
-    })
+  const directionFactor = useRef<number>(1);
+  useAnimationFrame((t, delta) => {
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
-    return (
-        <BackgroundContainer >
-            <PageContent>
-                <Container>
-                    {/* <Title>Technologies</Title> */}
-                    <TechsContainer>
-                        {items}
-                    </TechsContainer>
-                </Container>
-            </PageContent>
-        </BackgroundContainer>
-    )
+    /**
+     * This is what changes the direction of the scroll once we
+     * switch scrolling directions.
+     */
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+
+    baseX.set(baseX.get() + moveBy);
+  });
+
+  /**
+   * The number of times to repeat the child text should be dynamically calculated
+   * based on the size of the text and viewport. Likewise, the x motion value is
+   * currently wrapped between -20 and -45% - this 25% is derived from the fact
+   * we have four children (100% / 4). This would also want deriving from the
+   * dynamically generated number of children.
+   */
+  return (
+    <Parallax className={`${className}`}>
+      <motion.div 
+        style={{ x }}
+        className={`scroller`}
+      >
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+      </motion.div>
+    </Parallax>
+  );
+}
+
+export default function App() {
+  return (
+    <section>
+      <ParallaxText className="parallax" baseVelocity={1}>
+        <span style={{display: "flex"}}>
+          <Separator />
+          <span>Developer</span>
+          <Separator />
+          <span>Web</span>
+          <Separator />
+          <span>Full stack</span>
+        </span>
+      </ParallaxText>
+      <ParallaxText className="parallax-top" baseVelocity={-1}>
+        <span style={{display: "flex",}}>
+          <Separator />
+          <span>React</span>
+          <Separator />
+          <span>Vue</span>
+          <Separator />
+          <span>NodeJS</span>
+          <Separator />
+          <span>Postgres</span>
+        </span>  
+      </ParallaxText>
+    </section>
+  );
 }

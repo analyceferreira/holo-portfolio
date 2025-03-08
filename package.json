@@ -16,19 +16,22 @@
     "@splinetool/r3f-spline": "^1.0.1",
     "@splinetool/react-spline": "^2.2.6",
     "@types/styled-components": "^5.1.26",
+    "add": "^2.0.6",
     "framer-motion": "^11.0.14",
     "maath": "^0.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
+    "react-intersection-observer": "^9.8.1",
     "styled-components": "^5.3.6",
     "three": "^0.147.0"
   },
   "devDependencies": {
+    "@types/node": "^20.12.5",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
-    "typescript": "^5.4.2",
+    "typescript": "4.7",
     "vite": "^3.2.3"
   }
 }

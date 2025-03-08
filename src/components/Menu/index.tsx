@@ -13,10 +13,22 @@ export default function Menu() {
                     <Logo>Ana.</Logo>
 
                     <ButtonsMenuContainer>
-                        <MenuButton>Home</MenuButton>
-                        <MenuButton>Coisas de Ana</MenuButton>
-                        <MenuButton>Home</MenuButton>
-                        <MenuButton>Home</MenuButton>
+                        <MenuButton
+                            onClick={() => {
+                                document.querySelector('#hero')?.scrollIntoView({ behavior: 'smooth' })
+                            }}
+                        >Home</MenuButton>
+                        <MenuButton
+                            onClick={() => {
+                                document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
+                            }}
+                        >About Me</MenuButton>
+                        <MenuButton
+                            onClick={() => {
+                                document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' })
+                            }}
+                        >Portfólio</MenuButton>
+                        <MenuButton>Game</MenuButton>
                         <ContactButton>Contato</ContactButton>
                     </ButtonsMenuContainer>
                 </MenuContainer>

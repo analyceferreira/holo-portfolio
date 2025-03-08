@@ -1,9 +1,5 @@
 import React from 'react';
 import { DetatilsContainer, TechsContainer, Title, Description, Tech } from './styles';
-import { GrNode, GrReactjs } from "react-icons/gr";
-import { RiVuejsLine } from "react-icons/ri";
-import { BiLogoDocker, BiLogoGithub, BiLogoPostgresql, BiLogoTypescript, BiLogoVuejs } from "react-icons/bi";
-import { SiMysql, SiNestjs, SiNextdotjs, SiPostgresql } from "react-icons/si";
 
 interface IAboutDetailsProps {
     title: string;

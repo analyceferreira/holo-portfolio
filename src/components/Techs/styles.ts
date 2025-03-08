@@ -1,69 +1,57 @@
+import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components'
 
-export const BackgroundContainer = styled.div`
-    ${({ theme }) => css`
-        width: 100%;
-        height: 200px;
-        padding-bottom: 10px;
-        position:relative;
-        top: -160px;
-        
+export const Parallax = styled(motion.div)`
+    ${({ theme, className }) => css`
+        overflow: hidden;
+        weight: 100vw;
+        min-weight: 100vw;
+        padding: 8px 0;
+        position: relative !important;
+        top: -20px;
         display: flex;
-        justify-content: center;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        background: ${theme.colors.intensity100};
+        opacity: 0.5;
+        border-radius: 30px;
+        transform: rotate(-1deg);
+
+        ${className == 'parallax-top' && css`        
+            z-index: 99;
+            margin-top: 6px;
+            z-index: 5;
+        `};
     `};
-`;
 
-export const Container = styled.div`
-    ${({ theme}) => css`
-        width: 100%;
-        height: 100%;
+    .scroller {
+        ${({ theme }) => css`
+            ${theme.textVariants.h5};
+            color: ${theme.colors.error};
+        `};
+        text-transform: uppercase;
+        font-size: 14px;
+        opacity: 0.9;
         display: flex;
-
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-    `};
+    }
+
+    span {
+        display: block;
+        ${({ theme }) => css`
+            color: ${theme.colors.contrast};
+        `};
+    }
+
 `;
 
-export const Title = styled.p`
-    ${({ theme}) => css`
-        ${theme.textVariants.heading5};
 
-        padding-bottom: 20px;
-        text-align: center;
-        min-width: max-content;
-        position: relative;
-    `};
-`
-
-export const TechsContainer = styled.div`
-
-    ${({ theme }) => css`
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: ${theme.colors.contrast};
-
-        padding: 10px 5%;
-        border: 1px solid ${theme.colors.primary};
-        border-radius: 50px;
-    `};
-`;
-
-export const Divider = styled.a`
-    ${({ theme }) => css`
-        border-left: 1px solid ${theme.colors.primary};
-        height: 20px;
-    `};
-`
-
-export const TechNames = styled.a`
-    ${({ theme}) => css`
-        ${theme.textVariants.paragraph};
-        min-width: max-content;
-        position: relative;
-
-        color: ${theme.colors.contrastSecondary};
-    `};
+export const Separator = styled.div`
+    width: 11px;
+    height: 11px;
+    margin: 2px 12px 0;
+    background-image: url(/src/assets/images/star2.png);
+    background-size: 110%;
+    background-position: center;
+    mix-blend-mode: multiply;
 `;

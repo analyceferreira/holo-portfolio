@@ -46,6 +46,8 @@ export const MenuButton = styled.a`
         position: relative;
         cursor: pointer;
 
+        
+
         &:hover {
             color: ${theme.colors.tertiary};
             /* letter-spacing: -.125px; */

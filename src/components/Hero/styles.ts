@@ -36,16 +36,6 @@ export const TitleContainer = styled.div`
     `};
 `;
 
-// export const Title = styled.h1`
-//     ${({ theme}) => css`
-//         background-image: url("src/assets/images/texture2.jpg");
-//         background-repeat: repeat;
-//         -webkit-background-clip: text;
-//         -webkit-text-fill-color: transparent;
-//         ${theme.textVariants.h1};
-//         line-height: 84px;
-//     `};
-// `;
 export const Title = styled(motion.h1)`
     ${({ theme}) => css`
         ${theme.textVariants.h2};
@@ -57,9 +47,9 @@ export const Title = styled(motion.h1)`
 
 export const TitleBar = styled(motion.h1)`
     ${({ theme}) => css`
-        ${theme.textVariants.h3};
+        ${theme.textVariants.h2};
         color: ${theme.colors.contrast};
-        line-height: 75px;
+        line-height: 80px;
     `};
 `;
 
