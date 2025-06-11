@@ -22,7 +22,7 @@ export const lightTheme: DefaultTheme = {
         intensity800: pallet.blue800,
         intensity900: pallet.blue900,
 
-        primaryGradient: 'linear-gradient('+ pallet.black + ' 20%, ' + pallet.transparent + ' 100%)',
+        primaryGradient: 'linear-gradient(180deg, '+ pallet.transparentViolet700Strong + ' 50%, ' + pallet.transparent + ' 100%)',
         secondaryGradient: 'linear-gradient(180deg, ' + pallet.violet200 + ' 0%, ' + pallet.transparent  + ' 100%)',
         contrastGradient: 'linear-gradient(90deg, ' + pallet.blue400 + ' 0%, ' + pallet.violet300 + ' 50%, ' + pallet.blue250 + ' 100%)',
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Container, TitleSections } from '../../App/styles';
-import { PortfolioContainer, PortfolioCard, PortfolioCardDescription, PortfolioCardImage, PortfolioCardTitle, TechIcon, PortfolioCardTechs, PortfolioHeader, PortfolioCards } from './styles';
+import { PortfolioContainer, PortfolioCardTags, PortfolioCard, PortfolioCardImage, BrowseImage, PortfolioCardTitle, PortfolioCardHeader, PortfolioCards, PortfolioBrowsersImages } from './styles';
 import portfolio1 from '/src/assets/portfolio-assets/bv.png';
 import portfolio2 from '/src/assets/images/3.jpg';
 import portfolio3 from '/src/assets/images/3.jpg';
@@ -26,19 +26,19 @@ const TechsIcons: { [key: string]: JSX.Element } = {
 
 const PortfolioItens = [
     {
-        title: 'Portfolio 1',
+        title: 'Aplicativo SX Wallet',
         techs: ['React', 'Node', 'Postgres', 'Github'],
-        image: '/src/assets/portfolio-assets/bv.png',
+        image: '/src/assets/portfolio-assets/sxWalletApp.png',
     },
     {
         title: 'Portfolio 2',
         techs: ['React', 'Node', 'Postgres', 'Github'],
-        image: '/src/assets/portfolio-assets/bv.png',
+        image: '/src/assets/portfolio-assets/sxWalletApp.png',
     },
     {
         title: 'Portfolio 3',
         techs: ['React', 'Node', 'Postgres', 'Github'],
-        image: '/src/assets/portfolio-assets/bv.png',
+        image: '/src/assets/portfolio-assets/sxWalletApp.png',
     },
 ];
 
@@ -62,26 +62,43 @@ const PortfolioSection: React.FC = () => {
     };
 
     return (
-        <Content>
-            <PortfolioContainer >
-                <TitleSections>Portfolio</TitleSections>
-                <div style={{width:'100%'}}>
-                    <PortfolioHeader>
-                        <h4>Projetos</h4>
-                        {/* <Tags></Tags> */}
-                    </PortfolioHeader>
-                    <PortfolioCards href='#' >
-                        <PortfolioCard>
-                            <p>Nome do Projeto</p>
-                           
-                        </PortfolioCard>
-                        
-                    </PortfolioCards>
-
-
-                </div>
-            </PortfolioContainer>
-        </Content>
+      <Content>
+        <PortfolioContainer>
+          <TitleSections>Portfolio</TitleSections>
+          <div style={{ width: "100%" }}>
+            <PortfolioCards>
+              {PortfolioItens.map((item, index) => (
+                <PortfolioCard key={index}>
+                  <PortfolioCardHeader>
+                    <PortfolioCardTitle>{item.title}</PortfolioCardTitle>
+                    <PortfolioCardTags>
+                      {item.techs.map((tech, index) => (
+                        <span key={index}>{tech}</span>
+                      ))}
+                    </PortfolioCardTags>
+                  </PortfolioCardHeader>
+                  <PortfolioBrowsersImages>
+                    <BrowseImage className="browser-mockup">
+                      <div>
+                        <img src="https://cdn.discordapp.com/attachments/997292586333110365/1347813139114233889/ecommerce-site-2.png?ex=67cd304d&is=67cbdecd&hm=b3d40f70db22dd6d018a5fb3c9dc76cd7cc5956fcad6b48519ca9c1c2fe52e3e&" />
+                        </div>
+                    </BrowseImage>
+                    <BrowseImage className="browser-mockup">
+                    <div>
+                        <img src="https://cdn.discordapp.com/attachments/997292586333110365/1347813139114233889/ecommerce-site-2.png?ex=67cd304d&is=67cbdecd&hm=b3d40f70db22dd6d018a5fb3c9dc76cd7cc5956fcad6b48519ca9c1c2fe52e3e&" />
+                        </div>                    </BrowseImage>
+                    <BrowseImage className="browser-mockup">
+                    <div>
+                        <img src="https://cdn.discordapp.com/attachments/997292586333110365/1347813139114233889/ecommerce-site-2.png?ex=67cd304d&is=67cbdecd&hm=b3d40f70db22dd6d018a5fb3c9dc76cd7cc5956fcad6b48519ca9c1c2fe52e3e&" />
+                        </div>                    </BrowseImage>
+                  </PortfolioBrowsersImages>
+                  {/* <PortfolioCardImage src={item.image} alt={item.title} /> */}
+                </PortfolioCard>
+              ))}
+            </PortfolioCards>
+          </div>
+        </PortfolioContainer>
+      </Content>
     );
 };
 

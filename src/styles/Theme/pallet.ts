@@ -29,8 +29,8 @@ let pallet = {
 
     pink100: '#E54D7D',
 
-    transparentViolet700Strong: 'rgba(129,133,187,.99)',
-    transparentViolet700Soft: 'rgba(129,133,187,.05)',
+    transparentViolet700Strong: 'rgba(129,133,187,.5)',
+    transparentViolet700Soft: 'rgba(129,133,187,.5)',
     
     yellow100: '#FAEBD7',
     yellow200: '#E9E1DA',
