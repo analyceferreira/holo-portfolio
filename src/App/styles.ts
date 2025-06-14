@@ -54,7 +54,7 @@ export const BagImg1 = styled.div`
     width: 2000px;
     height: 2000px;
     background: ${(props) => props.theme.colors.primaryGradient};
-    background-image: url(/src/assets/images/blue.png);
+    background-image: url("/images/blue.png");
     background-size: 110%;
     background-position: center;
     position: absolute;
@@ -70,7 +70,7 @@ export const BagImg2 = styled.div`
     width: 2000px;
     height: 2000px;
     background: ${(props) => props.theme.colors.primaryGradient};
-    background-image: url(/src/assets/images/pink.png);
+    background-image: url("/images/pink.png");
     background-size: 110%;
     background-position: center;
     position: absolute;
@@ -85,7 +85,7 @@ export const BagImg3 = styled.div`
     width: 1600px;
     height: 1600px;
     background: ${(props) => props.theme.colors.primaryGradient};
-    background-image: url(/src/assets/images/blue.png);
+    background-image: url("/images/blue.png");
     background-size: 110%;
     background-position: center;
     position: absolute;
@@ -101,7 +101,7 @@ export const BagImg4 = styled.div`
     width: 1600px;
     height: 1600px;
     background: ${(props) => props.theme.colors.primaryGradient};
-    background-image: url(/src/assets/images/green.png);
+    background-image: url("/images/green.png");
     background-size: 110%;
     background-position: center;
     position: absolute;
@@ -118,7 +118,7 @@ export const BagImg5 = styled.div`
     width: 1600px;
     height: 1600px;
     background: ${(props) => props.theme.colors.primaryGradient};
-    background-image: url(/src/assets/images/blue2.png);
+    background-image: url("/images/blue2.png");
     background-size: 110%;
     background-position: center;
     position: absolute;
@@ -133,7 +133,7 @@ export const Bg = styled.div`
     width: 100vw;
     height: 100%;
     background: ${(props) => props.theme.colors.primaryGradient};
-    background-image: url(/src/assets/images/bg.jpg);
+    background-image: url("/images/bg.jpg");
     background-size: 100%;
     background-position: center;
     position: fixed;
@@ -148,7 +148,7 @@ export const Bg2 = styled.div`
     width: 100vw;
     height: 100%;
     background: ${(props) => props.theme.colors.primaryGradient};
-    background-image: url(/src/assets/images/bg2.jpg);
+    background-image: url("/images/bg2.jpg");
     background-size: 110%;
     background-position: center;
     position: fixed;
@@ -164,7 +164,7 @@ export const BgNoise = styled.div`
     width: 100vw;
     height: 100%;
     background: ${(props) => props.theme.colors.primaryGradient};
-    background-image: url(/src/assets/images/noise-texture.jpg);
+    background-image: url("/images/noise-texture.jpg");
     background-size: 110%;
     background-position: center;
     position: fixed;
