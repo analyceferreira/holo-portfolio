@@ -11,6 +11,18 @@ import {
 import { wrap } from "@motionone/utils";
 import React from "react";
 import { Parallax, Separator } from "./styles";
+import { GrNode, GrReactjs } from "react-icons/gr";
+import { SiNextdotjs, SiPostgresql } from "react-icons/si";
+import { BiLogoTypescript, BiLogoVuejs } from "react-icons/bi";
+import { TbBrandTypescript } from "react-icons/tb";
+import { TbDeviceDesktopCode } from "react-icons/tb";
+import { TbPointerCode } from "react-icons/tb";
+import { FaCode } from "react-icons/fa6";
+
+
+import { RiCodeFill } from "react-icons/ri";
+
+
 
 interface ParallaxProps {
   children: React.ReactNode;
@@ -80,30 +92,74 @@ function ParallaxText({ children, className, baseVelocity = 100 }: ParallaxProps
   );
 }
 
-export default function App() {
+export default function Techs() {
   return (
     <section>
       <ParallaxText className="parallax" baseVelocity={1}>
         <span style={{display: "flex"}}>
           <Separator />
-          <span>Developer</span>
+          <span>
+            <FaCode />
+          Developer
+          </span>
           <Separator />
-          <span>Web</span>
+          <span>
+            <TbPointerCode />
+            Web
+          </span>
           <Separator />
-          <span>Full stack</span>
+          <span>
+            <TbDeviceDesktopCode/>
+            Full stack
+          </span>
+          <Separator />
+          <span>
+            <FaCode />
+            Developer
+            </span>
+          <Separator />
+          <span>
+            <TbPointerCode />
+            Web
+          </span>
+          <Separator />
+          <span>
+            <TbDeviceDesktopCode/>
+            Full stack
+          </span>
         </span>
       </ParallaxText>
       <ParallaxText className="parallax-top" baseVelocity={-1}>
-        <span style={{display: "flex",}}>
+        <span style={{ display: "flex"}}>
           <Separator />
-          <span>React</span>
+          <span>
+            <GrReactjs /> React
+          </span>
           <Separator />
-          <span>Vue</span>
+          <span>
+            <SiNextdotjs /> NextJS
+          </span>
           <Separator />
-          <span>NodeJS</span>
+          <span>
+            <TbBrandTypescript />
+            Typescript
+          </span>
           <Separator />
-          <span>Postgres</span>
-        </span>  
+          <span>
+            <BiLogoVuejs />
+            VueJS
+          </span>
+          <Separator />
+          <span> 
+            <GrNode />
+            NodeJS
+          </span>
+          <Separator />
+          <span>
+            <SiPostgresql />
+            Postgres
+          </span>
+        </span>
       </ParallaxText>
     </section>
   );

@@ -37,7 +37,9 @@ export const Parallax = styled(motion.div)`
     }
 
     span {
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: 8px;
         ${({ theme }) => css`
             color: ${theme.colors.contrast};
         `};
@@ -49,7 +51,7 @@ export const Parallax = styled(motion.div)`
 export const Separator = styled.div`
     width: 11px;
     height: 11px;
-    margin: 2px 12px 0;
+    margin: 2px 10px 0;
     background-image: url(/src/assets/images/star2.png);
     background-size: 110%;
     background-position: center;

@@ -28,17 +28,17 @@ const PortfolioItens = [
     {
         title: 'Aplicativo SX Wallet',
         techs: ['React', 'Node', 'Postgres', 'Github'],
-        image: '/src/assets/portfolio-assets/sxWalletApp.png',
+        image: '/portfolio-assets/sxWalletApp.png',
     },
     {
         title: 'Portfolio 2',
         techs: ['React', 'Node', 'Postgres', 'Github'],
-        image: '/src/assets/portfolio-assets/sxWalletApp.png',
+        image: '/portfolio-assets/sxWalletApp.png',
     },
     {
         title: 'Portfolio 3',
         techs: ['React', 'Node', 'Postgres', 'Github'],
-        image: '/src/assets/portfolio-assets/sxWalletApp.png',
+        image: '/portfolio-assets/sxWalletApp.png',
     },
 ];
 
