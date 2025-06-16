@@ -7,6 +7,8 @@ export const Content = styled.div`
     height: 50%;
     z-index: 5;
 
+    scroll-margin: 60px;
+
     @media (max-width: ${theme.spacings.content}) {
       padding: 0 4%;
     }

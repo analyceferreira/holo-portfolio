@@ -8,6 +8,8 @@ export const Container = styled(motion.section)`
   margin-top: 15%;
   margin-bottom: 15%;
 
+  scroll-margin: 60px;
+
   display: flex;
   flex-direction: column;
   align-items: center;

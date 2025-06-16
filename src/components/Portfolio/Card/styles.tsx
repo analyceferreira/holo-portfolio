@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes, css } from "styled-components";
 
 const rotate = keyframes`
   from {
@@ -49,9 +49,13 @@ export const Example1 = styled.div`
   justify-content: center;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
-    background: linear-gradient(90deg, hsla(197, 100%, 64%, 1) 0%, hsla(339, 100%, 55%, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      hsla(197, 100%, 64%, 1) 0%,
+      hsla(339, 100%, 55%, 1) 100%
+    );
     height: 500px;
     width: 500px;
     position: absolute;
@@ -68,9 +72,14 @@ export const Example2 = styled.div`
   justify-content: center;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(102, 102, 102, 0.75) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(102, 102, 102, 0.75) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
     height: 300px;
     width: 100px;
     position: absolute;
@@ -86,14 +95,23 @@ export const Example3 = styled.div`
   border-radius: 8px;
   padding: 4px;
 
-  &::before, &::after {
-    content: '';
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(45deg, #ff595e, #ffca3a, #8ac926, #1982c4, #6a4c93, #ff6700);
+    background: linear-gradient(
+      45deg,
+      #ff595e,
+      #ffca3a,
+      #8ac926,
+      #1982c4,
+      #6a4c93,
+      #ff6700
+    );
     background-size: 400%;
     z-index: -1;
     animation: ${glow} 20s linear infinite;

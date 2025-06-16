@@ -90,7 +90,7 @@ const PortfolioItens = [
       "Figma",
     ],
     images: [
-      "https://media.discordapp.net/attachments/997292586333110365/1384232803314565164/Scene_13.png?ex=6851aec2&is=68505d42&hm=e8a89c4264b20fe4f71477a8a285b9dddb77ec56972e56e2f0bd75401711e1f4&=",
+      "https://media.discordapp.net/attachments/997292586333110365/1384233670549835917/Scene_13_1.png?ex=6851af90&is=68505e10&hm=32f0f6a0967ff99b65c2f332cc0eb32d76ea8abee708900b5e3dad15b12ad179&=",
       "https://media.discordapp.net/attachments/997292586333110365/1384232806158172220/Home_2.png?ex=6851aec2&is=68505d42&hm=2cdd81f35f57af37698c7f62a254acf9bf222afa44f36362d1cc26d2f7adf423&=",
     ],
   },
@@ -115,7 +115,7 @@ const PortfolioSection: React.FC = () => {
   };
 
   return (
-    <Content>
+    <Content id="portfolio">
       <PortfolioContainer>
         <TitleSections>Portfolio</TitleSections>
         <div

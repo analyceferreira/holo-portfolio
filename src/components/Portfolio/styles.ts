@@ -69,7 +69,7 @@ export const PortfolioCardImage = styled.img`
             object-position: top;
         }
         50% {
-           object-position: bottom;
+           object-position: center;
         }
         100% {
            object-position: top;
@@ -145,13 +145,19 @@ export const BrowseImage = styled.div<BrowseImageProps>`
                     0% {
                         object-position: top;
                     }
+                    30% {
+                    object-position: 50.0899% 25.3876%
+                    }
+                    40% {
+                    object-position: 50.0899% 20.3876%
+                    }
                     50% {
-                    object-position: bottom;
+                    object-position: 50.0899% 25.3876%
                     }
                     100% {
                     object-position: top;
                     }
-                `} 30s ease infinite;
+                `} 10s ease infinite;
 
       &:hover {
         animation-play-state: paused;
