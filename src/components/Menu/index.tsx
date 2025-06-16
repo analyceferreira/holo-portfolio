@@ -45,8 +45,16 @@ export default function Menu() {
             >
               Portfólio
             </MenuButton>
-            <MenuButton>Game</MenuButton>
-            <ContactButton>Contato</ContactButton>
+            {/* <MenuButton>Game</MenuButton> */}
+            <ContactButton
+              onClick={() => {
+                document
+                  .querySelector("#contact")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
+              Contato
+            </ContactButton>
           </ButtonsMenuContainer>
         </MenuContainer>
       </PageContent>

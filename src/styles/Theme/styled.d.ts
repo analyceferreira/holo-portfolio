@@ -38,6 +38,7 @@ declare module "styled-components" {
       contrast: string;
       contrastSecondary: string;
       contrastTertiary: string;
+      contrastQuaternary: string;
 
       intensity100: string;
       intensity200: string;

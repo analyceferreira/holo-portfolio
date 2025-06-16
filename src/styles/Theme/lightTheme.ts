@@ -11,6 +11,7 @@ export const lightTheme: DefaultTheme = {
     contrast: pallet.blue900,
     contrastSecondary: pallet.white,
     contrastTertiary: "#4f46e5",
+    contrastQuaternary: pallet.blue250,
 
     intensity100: pallet.violet100,
     intensity200: pallet.gray200,

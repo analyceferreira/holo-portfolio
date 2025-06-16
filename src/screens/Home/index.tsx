@@ -1,15 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import Hero from '../../components/Hero'
-import Menu from '../../components/Menu';
-import Techs from '../../components/Techs';
-import About from '../../components/About';
-import Portfolio from '../../components/Portfolio';
-
+import Hero from "../../components/Hero";
+import Menu from "../../components/Menu";
+import Techs from "../../components/Techs";
+import About from "../../components/About";
+import Portfolio from "../../components/Portfolio";
+import Contact from "../../components/Contact";
 
 export default function Home() {
-
-  const techs = ['ReactJS', 'React Native', 'VueJS', 'NodeJS', 'Figma']
+  const techs = ["ReactJS", "React Native", "VueJS", "NodeJS", "Figma"];
 
   return (
     <>
@@ -18,6 +17,7 @@ export default function Home() {
       <Techs />
       <About />
       <Portfolio />
+      <Contact />
     </>
-  )
+  );
 }

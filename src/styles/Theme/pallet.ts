@@ -40,6 +40,8 @@ let pallet = {
   yellow600: "#FD8907",
   yellowBrownOp30: "rgba(254, 200, 118, 0.3)",
 
+  orange: "#FCAD80ff",
+
   red: "#ED5757",
   softRed: "rgba(237, 87, 87,0.7)",
   green: "#8AC083",
