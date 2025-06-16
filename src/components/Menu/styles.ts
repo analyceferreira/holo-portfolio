@@ -45,7 +45,7 @@ export const Logo = styled.h1`
     width: 100%;
     ${theme.textVariants.h5};
 
-    background-image: url("src/assets/images/texture2.jpg");
+    background-image: url("/images/texture2.jpg");
     background-repeat: repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -96,6 +96,10 @@ export const ContactButton = styled.button`
     &:hover {
       background-color: ${theme.colors.primary};
     }
+    @media (max-width: 768px) {
+      width: fit-content;
+      padding: 3px 8px;
+    }
   `};
 `;
 
@@ -106,5 +110,9 @@ export const ButtonsMenuContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
   `};
 `;
