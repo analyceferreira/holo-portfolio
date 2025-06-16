@@ -9,7 +9,7 @@ export const BackgroundContainer = styled.div`
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 999;
+    z-index: 99;
 
     //make the background transparent freeze the background and text
     background: ${theme.colors.backgroundTransparent};

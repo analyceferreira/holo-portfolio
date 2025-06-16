@@ -6,6 +6,9 @@ export const Content = styled.div`
         width: 100%;
         height: 50%;
         z-index: 5;
-        
+
+        @media (max-width: ${theme.spacings.content}) {
+            padding: 0 4%;
+        }
     `};
 `;
