@@ -74,6 +74,29 @@ export const BagImg1 = styled.div`
   }
 `;
 
+export const BagImg1Body = styled.div`
+  width: 2000px;
+  height: 2000px;
+  background: ${(props) => props.theme.colors.primaryGradient};
+  background-image: url("./images/blue.png");
+  background-size: 110%;
+  background-position: center;
+  position: absolute;
+  opacity: 0.3;
+  top: -100vh;
+  left: -80%;
+  z-index: 0;
+  mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1500px;
+    height: 1500px;
+    top: -80vh;
+    left: -240%;
+    right: 0;
+  }
+`;
+
 export const BagImg2 = styled.div`
   width: 2000px;
   height: 2000px;
@@ -83,6 +106,29 @@ export const BagImg2 = styled.div`
   background-position: center;
   position: absolute;
   opacity: 0.2;
+  top: -200vh;
+  left: 20%;
+  z-index: 0;
+  mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1500px;
+    height: 1500px;
+    top: -10vh;
+    left: 10%;
+    opacity: 0.4;
+  }
+`;
+
+export const BagImg2Body = styled.div`
+  width: 2000px;
+  height: 2000px;
+  background: ${(props) => props.theme.colors.primaryGradient};
+  background-image: url("../images/pink.png");
+  background-size: 110%;
+  background-position: center;
+  position: absolute;
+  opacity: 0.1;
   top: -200vh;
   left: 20%;
   z-index: 0;
@@ -119,6 +165,28 @@ export const BagImg3 = styled.div`
   }
 `;
 
+export const BagImg3Body = styled.div`
+  width: 1600px;
+  height: 1600px;
+  background: ${(props) => props.theme.colors.primaryGradient};
+  background-image: url("./images/blue.png");
+  background-size: 110%;
+  background-position: center;
+  position: absolute;
+  opacity: 0.1;
+  top: 0%;
+  left: 60%;
+  z-index: 0;
+  mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1200px;
+    height: 1200px;
+    top: -50vh;
+    left: 40%;
+  }
+`;
+
 export const BagImg4 = styled.div`
   width: 1600px;
   height: 1600px;
@@ -142,6 +210,29 @@ export const BagImg4 = styled.div`
   }
 `;
 
+export const BagImg4Body = styled.div`
+  width: 1600px;
+  height: 1600px;
+  background: ${(props) => props.theme.colors.primaryGradient};
+  background-image: url("./images/green.png");
+  background-size: 110%;
+  background-position: center;
+  position: absolute;
+  opacity: 0.1;
+  top: -180vh;
+  left: 0%;
+  z-index: 0;
+  mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1200px;
+    height: 1200px;
+    top: -100vh;
+    left: -20%;
+    opacity: 0.3;
+  }
+`;
+
 export const BagImg5 = styled.div`
   width: 1600px;
   height: 1600px;
@@ -151,6 +242,28 @@ export const BagImg5 = styled.div`
   background-position: center;
   position: absolute;
   opacity: 0.6;
+  top: 0%;
+  left: 0%;
+  z-index: 0;
+  mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1200px;
+    height: 1200px;
+    top: -50vh;
+    left: -20%;
+  }
+`;
+
+export const BagImg5Body = styled.div`
+  width: 1600px;
+  height: 1600px;
+  background: ${(props) => props.theme.colors.primaryGradient};
+  background-image: url("./images/blue2.png");
+  background-size: 110%;
+  background-position: center;
+  position: absolute;
+  opacity: 0.1;
   top: 0%;
   left: 0%;
   z-index: 0;

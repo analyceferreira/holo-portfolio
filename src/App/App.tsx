@@ -4,10 +4,15 @@ import GlobalStyle from "../styles/globalStyle.js";
 import Home from "../screens/Home/index";
 import {
   BagImg1,
+  BagImg1Body,
   BagImg2,
+  BagImg2Body,
   BagImg3,
+  BagImg3Body,
   BagImg4,
+  BagImg4Body,
   BagImg5,
+  BagImg5Body,
   BgNoise,
   Container,
   ContainerBg,
@@ -23,40 +28,40 @@ export default function App() {
         <BagImg4 />
         <BagImg5 />
 
-        <BagImg2 style={{ top: "100vh" }} />
-        <BagImg3 style={{ top: "100vh" }} />
-        <BagImg4 style={{ top: "100vh" }} />
-        <BagImg5 style={{ top: "40vh", left: "-250vw" }} />
+        <BagImg2Body style={{ top: "100vh" }} />
+        <BagImg3Body style={{ top: "100vh" }} />
+        <BagImg4Body style={{ top: "100vh" }} />
+        <BagImg5Body style={{ top: "40vh", left: "-250vw" }} />
 
-        <BagImg1 style={{ top: "200vh" }} />
-        <BagImg2 style={{ top: "200vh" }} />
-        <BagImg3 style={{ top: "200vh" }} />
-        <BagImg4 style={{ top: "200vh" }} />
-        <BagImg5 style={{ top: "200vh" }} />
+        <BagImg1Body style={{ top: "200vh" }} />
+        <BagImg2Body style={{ top: "200vh" }} />
+        <BagImg3Body style={{ top: "200vh" }} />
+        <BagImg4Body style={{ top: "200vh" }} />
+        <BagImg5Body style={{ top: "200vh" }} />
 
-        <BagImg1 style={{ top: "300vh" }} />
-        <BagImg2 style={{ top: "300vh" }} />
-        <BagImg3 style={{ top: "300vh" }} />
-        <BagImg4 style={{ top: "300vh" }} />
-        <BagImg5 style={{ top: "300vh" }} />
+        <BagImg1Body style={{ top: "300vh" }} />
+        <BagImg2Body style={{ top: "300vh" }} />
+        <BagImg3Body style={{ top: "300vh" }} />
+        <BagImg4Body style={{ top: "300vh" }} />
+        <BagImg5Body style={{ top: "300vh" }} />
 
-        <BagImg1 style={{ top: "400vh" }} />
-        <BagImg2 style={{ top: "400vh" }} />
-        <BagImg3 style={{ top: "400vh" }} />
-        <BagImg4 style={{ top: "400vh" }} />
-        <BagImg5 style={{ top: "400vh" }} />
+        <BagImg1Body style={{ top: "400vh" }} />
+        <BagImg2Body style={{ top: "400vh" }} />
+        <BagImg3Body style={{ top: "400vh" }} />
+        <BagImg4Body style={{ top: "400vh" }} />
+        <BagImg5Body style={{ top: "400vh" }} />
 
-        <BagImg1 style={{ top: "500vh" }} />
-        <BagImg2 style={{ top: "500vh" }} />
-        <BagImg3 style={{ top: "500vh" }} />
-        <BagImg4 style={{ top: "500vh" }} />
-        <BagImg5 style={{ top: "500vh" }} />
+        <BagImg1Body style={{ top: "500vh" }} />
+        <BagImg2Body style={{ top: "500vh" }} />
+        <BagImg3Body style={{ top: "500vh" }} />
+        <BagImg4Body style={{ top: "500vh" }} />
+        <BagImg5Body style={{ top: "500vh" }} />
 
-        <BagImg1 style={{ top: "600vh" }} />
-        <BagImg2 style={{ top: "600vh" }} />
-        <BagImg3 style={{ top: "600vh" }} />
-        <BagImg4 style={{ top: "600vh" }} />
-        <BagImg5 style={{ top: "600vh" }} />
+        <BagImg1Body style={{ top: "600vh" }} />
+        <BagImg2Body style={{ top: "600vh" }} />
+        <BagImg3Body style={{ top: "600vh" }} />
+        <BagImg4Body style={{ top: "600vh" }} />
+        <BagImg5Body style={{ top: "600vh" }} />
       </ContainerBg>
       <BgNoise />
 
