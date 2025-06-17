@@ -64,6 +64,14 @@ export const BagImg1 = styled.div`
   left: -80%;
   z-index: 0;
   mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1500px;
+    height: 1500px;
+    top: -80vh;
+    left: -240%;
+    right: 0;
+  }
 `;
 
 export const BagImg2 = styled.div`
@@ -79,6 +87,14 @@ export const BagImg2 = styled.div`
   left: 20%;
   z-index: 0;
   mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1500px;
+    height: 1500px;
+    top: -10vh;
+    left: 10%;
+    opacity: 0.4;
+  }
 `;
 
 export const BagImg3 = styled.div`
@@ -94,6 +110,13 @@ export const BagImg3 = styled.div`
   left: 60%;
   z-index: 0;
   mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1200px;
+    height: 1200px;
+    top: -50vh;
+    left: 40%;
+  }
 `;
 
 export const BagImg4 = styled.div`
@@ -109,6 +132,14 @@ export const BagImg4 = styled.div`
   left: 0%;
   z-index: 0;
   mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    width: 1200px;
+    height: 1200px;
+    top: -100vh;
+    left: -20%;
+    opacity: 0.3;
+  }
 `;
 
 export const BagImg5 = styled.div`
@@ -124,6 +155,12 @@ export const BagImg5 = styled.div`
   left: 0%;
   z-index: 0;
   mix-blend-mode: multiply;
+  @media (max-width: 768px) {
+    width: 1200px;
+    height: 1200px;
+    top: -50vh;
+    left: -20%;
+  }
 `;
 
 export const Bg = styled.div`
@@ -154,6 +191,11 @@ export const Bg2 = styled.div`
   left: 0;
   z-index: 0;
   mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    top: -50vh;
+    background-size: 120%;
+  }
 `;
 
 export const BgNoise = styled.div`
@@ -169,4 +211,9 @@ export const BgNoise = styled.div`
   left: 0;
   z-index: 1;
   mix-blend-mode: multiply;
+
+  @media (max-width: 768px) {
+    top: -50vh;
+    background-size: 120%;
+  }
 `;
