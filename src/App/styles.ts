@@ -155,6 +155,7 @@ export const BagImg5 = styled.div`
   left: 0%;
   z-index: 0;
   mix-blend-mode: multiply;
+
   @media (max-width: 768px) {
     width: 1200px;
     height: 1200px;
