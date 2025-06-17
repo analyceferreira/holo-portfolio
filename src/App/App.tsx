@@ -41,7 +41,7 @@ export default function App() {
         <BagImg4Body style={{ top: "200vh" }} />
         <BagImg5Body style={{ top: "200vh" }} />
 
-        <BagImg1Body style={{ top: "300vh" }} />
+        {/* <BagImg1Body style={{ top: "300vh" }} /> */}
         <BagImg2Body style={{ top: "300vh" }} />
         <BagImg3Body style={{ top: "300vh" }} />
         <BagImg3
@@ -60,7 +60,7 @@ export default function App() {
         <BagImg4Body style={{ top: "400vh" }} />
         <BagImg5Body style={{ top: "400vh" }} />
 
-        <BagImg1Body style={{ top: "500vh" }} />
+        {/* <BagImg1Body style={{ top: "500vh" }} /> */}
         <BagImg1Body style={{ top: "500vh", left: "50%" }} />
         {/* <BagImg2Body style={{ top: "500vh" }} /> */}
         <BagImg3Body style={{ top: "500vh" }} />
