@@ -37,7 +37,16 @@ const TechsIcons: { [key: string]: JSX.Element } = {
   Github: <BiLogoGithub />,
 };
 
-const PortfolioItens = [
+type PortfolioItemProps = {
+  title: string;
+  techs: string[];
+  link?: string;
+  images: string[];
+  github?: string;
+  figma?: string;
+};
+
+const PortfolioItens: PortfolioItemProps[] = [
   {
     title: "Fichas 24h",
     techs: ["FlutterFlow", "Node", "Postgres", "Figma"],
@@ -51,9 +60,6 @@ const PortfolioItens = [
   {
     title: "Caixa BetVencedor",
     link: "https://betvencedor.com/",
-    // github: "https://github.com/analyceferreira/loot-box-bV",
-    // figma:
-    //   "https://www.figma.com/design/YRyhvhRDM6frW1BcP173ow/Caixa-bV?t=ufYYuBczKIBk5zc5-1",
     techs: ["NextJS", "Framer Motion", "React Query", "Tailwind", "Figma"],
     images: [
       "https://media.discordapp.net/attachments/997292586333110365/1384223947460972564/iphone-multiple-screens-mockup_1_1.png?ex=6851a682&is=68505502&hm=d54727a2ecb05ad1a7b9755dc74e439b6c735fcb8f8c4b01da5f4d379ec4e940&=",
@@ -64,8 +70,6 @@ const PortfolioItens = [
   {
     title: "Ecommerce Platform",
     github: "https://github.com/analyceferreira/ecommerce-pi",
-    figma:
-      "https://www.figma.com/design/GNHUs8A5ZPVtGlFEg9GNYh/Layout-Ecommerce-Plataform?node-id=0-1&t=ufYYuBczKIBk5zc5-1",
     techs: ["EJS", "Node", "Postgres", "Express", "Figma"],
     images: [
       "https://media.discordapp.net/attachments/997292586333110365/1384235976867713255/Scene_13.png?ex=6851b1b6&is=68506036&hm=7c5d22d4e9bcd7ee76437c392c2dca2e4aa367afe1527bd6a186f8a74b560299&=",
@@ -78,8 +82,6 @@ const PortfolioItens = [
   {
     title: "GlobalProtege",
     link: "https://globalprotege.com.br",
-    figma:
-      "https://www.figma.com/design/pAmJRRIaYAc44F0yQHW6Aw/GlobalProtege?t=ufYYuBczKIBk5zc5-1",
     techs: [
       "NextJs",
       "React",
@@ -160,14 +162,14 @@ const PortfolioSection: React.FC = () => {
                         <BiLogoGithub size={24} />
                       </a>
                     )}
-                    {item.figma && (
+                    {item?.figma && (
                       <a
                         style={{
                           display: "flex",
                           alignItems: "center",
                           transition: "color 0.2s",
                         }}
-                        href={item.figma}
+                        href={item?.figma}
                         target="_blank"
                       >
                         <PiFigmaLogo size={22} />
