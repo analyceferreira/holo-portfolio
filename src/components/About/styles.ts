@@ -116,7 +116,7 @@ export const ImageContainer = styled.div`
     width: 350px;
     height: 400px;
     ${theme.textVariants.paragraph};
-    background: url("/images/bg8.jpg");
+    background: url("./images/bg8.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 

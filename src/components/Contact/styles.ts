@@ -100,8 +100,8 @@ export const ContactAsset = styled.div`
   width: 115px;
   height: 100%;
   background-color: ${(props) => props.theme.colors.contrastSecondary};
-  -webkit-mask-image: url(/assets/Group8.svg);
-  mask-image: url("/assets/Group8.svg");
+  -webkit-mask-image: url("./assets/Group8.svg");
+  mask-image: url("./assets/Group8.svg");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -115,8 +115,8 @@ export const ContactAsset2 = styled.div`
   width: 25px;
   height: 100%;
   background-color: ${(props) => props.theme.colors.primary};
-  -webkit-mask-image: url(/assets/Group2.svg);
-  mask-image: url("/assets/Group2.svg");
+  -webkit-mask-image: url("./assets/Group2.svg");
+  mask-image: url("./assets/Group2.svg");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -130,8 +130,8 @@ export const ContactAsset3 = styled.div`
   width: 70px;
   height: 100%;
   background-color: ${(props) => props.theme.colors.contrastSecondary};
-  -webkit-mask-image: url(/assets/Group1.svg);
-  mask-image: url("/assets/Group1.svg");
+  -webkit-mask-image: url("./assets/Group1.svg");
+  mask-image: url("./assets/Group1.svg");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;

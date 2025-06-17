@@ -45,7 +45,7 @@ export const Logo = styled.h1`
     width: 100%;
     ${theme.textVariants.h5};
 
-    background-image: url("/images/texture2.jpg");
+    background-image: url("./images/texture2.jpg");
     background-repeat: repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

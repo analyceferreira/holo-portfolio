@@ -69,8 +69,8 @@ const PortfolioItens = [
     techs: ["EJS", "Node", "Postgres", "Express", "Figma"],
     images: [
       "https://media.discordapp.net/attachments/997292586333110365/1384235976867713255/Scene_13.png?ex=6851b1b6&is=68506036&hm=7c5d22d4e9bcd7ee76437c392c2dca2e4aa367afe1527bd6a186f8a74b560299&=",
-      "https://media.discordapp.net/attachments/997292586333110365/1025050740659585024/a.png?ex=68502965&is=684ed7e5&hm=2a8d3b87c2f9db8abbdc7ca4af2274f23fc8c91b2c1e5a2f614497a40c6bec98&=",
-      "https://media.discordapp.net/attachments/997292586333110365/1025050050189074483/Opera_Instantaneo_2022-08-30_180520_localhost_2.png?ex=685028c0&is=684ed740&hm=c26a201f8f53674cd7877b8fd04a13fca572f536dc9458718c59f7bc8d443422&=",
+      "https://media.discordapp.net/attachments/997292586333110365/1025050740659585024/a.png?ex=685223a5&is=6850d225&hm=c22d254ad75c18fc58ddda34caa1035302c7889ffbc39f8f75c56dfa19b5f398&=",
+      "https://media.discordapp.net/attachments/997292586333110365/1025050050189074483/Opera_Instantaneo_2022-08-30_180520_localhost_2.png?ex=68522300&is=6850d180&hm=34d4a9406f968330561c8126ca374000a71fd4d83aa3e00624c725005802c1c6&=",
       "https://media.discordapp.net/attachments/997292586333110365/1384235978335584316/Frame_1.png?ex=6851b1b7&is=68506037&hm=17bdc6b0160116317417d74b11a14eb5084f6b99addbf09255e9002332f073f7&=",
       "https://media.discordapp.net/attachments/997292586333110365/1384235979463721072/Frame_5.png?ex=6851b1b7&is=68506037&hm=d6868eca0b153a3df1e8b28750a5183841c31bbb6267589fc6cca44915b7153d&=",
     ],
