@@ -22,6 +22,7 @@ export default function App() {
         <BagImg3 />
         <BagImg4 />
         <BagImg5 />
+
         <BagImg2 style={{ top: "100vh" }} />
         <BagImg3 style={{ top: "100vh" }} />
         <BagImg4 style={{ top: "100vh" }} />
