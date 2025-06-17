@@ -11,15 +11,6 @@ export const DetatilsContainer = styled.div`
   `};
 `;
 
-export const Title = styled(motion.h1)`
-  ${({ theme }) => css`
-    width: max-content;
-    ${theme.textVariants.h4};
-    color: ${theme.colors.primary};
-    position: relative;
-  `};
-`;
-
 export const Description = styled(motion.p)`
   ${({ theme }) => css`
     ${theme.textVariants.largeParagraph};

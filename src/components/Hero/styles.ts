@@ -36,6 +36,11 @@ export const TextContainer = styled.div`
       top: 0;
       transform: translateX(40%);
     }
+    @media (max-width: 400px) {
+      width: 100%;
+      right: 0;
+      transform: translateX(0);
+    }
   `};
 `;
 
@@ -52,6 +57,10 @@ export const Title = styled(motion.h1)`
     ${theme.textVariants.h2};
     color: ${theme.colors.contrast};
     line-height: 70px;
+
+    @media (max-width: 600px) {
+      ${theme.textVariants.h3};
+    }
   `};
 `;
 

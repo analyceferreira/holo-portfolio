@@ -39,6 +39,7 @@ declare module "styled-components" {
       contrastSecondary: string;
       contrastTertiary: string;
       contrastQuaternary: string;
+      contrastSextary: string;
 
       intensity100: string;
       intensity200: string;
@@ -53,6 +54,8 @@ declare module "styled-components" {
       primaryGradient: string;
       secondaryGradient: string;
       contrastGradient: string;
+      tertiaryGradient: string;
+      quartenaryGradient: string;
 
       background: string;
       backgroundTransparent: string;

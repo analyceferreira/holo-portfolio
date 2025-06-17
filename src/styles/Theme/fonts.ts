@@ -51,7 +51,7 @@ const textVariants: ITextVariants = {
     `;
         font-weight: 700;
         font-size: ` +
-    sizes.l +
+    sizes.xl +
     `;
         letter-spacing: 0;`,
   h5:

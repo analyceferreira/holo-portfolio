@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m, motion } from "framer-motion";
 import styled, { css, keyframes } from "styled-components";
 
 export const PortfolioContainer = styled(motion.section)`
@@ -205,7 +205,7 @@ export const PortfolioCardHeader = styled.div`
   `};
 `;
 
-export const PortfolioCardTitle = styled.h3`
+export const PortfolioCardTitle = styled(motion.h3)`
   ${({ theme }) => css`
     width: 100%;
 
@@ -215,6 +215,10 @@ export const PortfolioCardTitle = styled.h3`
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @media (max-width: 768px) {
+      ${theme.textVariants.h4};
+    }
   `};
 `;
 

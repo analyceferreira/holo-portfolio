@@ -1,17 +1,13 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
-import { Stats } from '@react-three/drei'
-import { Euler, Vector3 } from 'three'
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
+import { Euler, Vector3 } from "three";
 
 // import Scene from '../3DScene/Scene'
 // import NewScene from '../3DScene/NewScene'
 
-import { Container, SceneContainer } from './styles.js'
-import { MathUtils } from 'three';
-import Spline from '@splinetool/react-spline'
-
-
+import { Container, SceneContainer } from "./styles.js";
+import { MathUtils } from "three";
+import Spline from "@splinetool/react-spline";
 
 function RigCamera() {
   const { camera, mouse } = useThree();
@@ -27,10 +23,18 @@ function RigCamera() {
     targetRotation.set(mouse.y * Math.PI, mouse.x * Math.PI, 0);
 
     // Use lerp to smoothly transition the camera's rotation to the target rotation
-    camera.rotation.x = MathUtils.lerp(camera.rotation.x, targetRotation.x, lerpFactor);
-    camera.rotation.y = MathUtils.lerp(camera.rotation.y, targetRotation.y, lerpFactor);
+    camera.rotation.x = MathUtils.lerp(
+      camera.rotation.x,
+      targetRotation.x,
+      lerpFactor
+    );
+    camera.rotation.y = MathUtils.lerp(
+      camera.rotation.y,
+      targetRotation.y,
+      lerpFactor
+    );
 
-    camera.lookAt(mouse.x * 30, mouse.y *10, 100 * mouse.y);
+    camera.lookAt(mouse.x * 30, mouse.y * 10, 100 * mouse.y);
   });
 }
 
@@ -42,23 +46,20 @@ export default function Face3D() {
       setMousePos({ x: event.clientX, y: event.clientY });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener(
-        'mousemove',
-        handleMouseMove
-      );
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
-    <Container >
+    <Container>
       <SceneContainer>
-        <Suspense >
+        <Suspense>
           <Spline scene="https://prod.spline.design/xwgjuT3XdlHHXEnb/scene.splinecode" />
         </Suspense>
       </SceneContainer>
     </Container>
-  )
+  );
 }

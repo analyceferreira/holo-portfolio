@@ -15,6 +15,13 @@ export const Container = styled.div`
 
     transform: translateX(-20%);
   }
+
+  @media (max-width: 400px) {
+    position: absolute;
+    min-width: 682px;
+    left: 60%;
+    transform: translateX(-40%);
+  }
 `;
 
 export const SceneContainer = styled.div`

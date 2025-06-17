@@ -6,6 +6,7 @@ import Techs from "../../components/Techs";
 import About from "../../components/About";
 import Portfolio from "../../components/Portfolio";
 import Contact from "../../components/Contact";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   const techs = ["ReactJS", "React Native", "VueJS", "NodeJS", "Figma"];
@@ -18,6 +19,7 @@ export default function Home() {
       <About />
       <Portfolio />
       <Contact />
+      <Footer />
     </>
   );
 }

@@ -16,7 +16,7 @@ import { TbMailFilled } from "react-icons/tb";
 
 const ContactSection: React.FC = () => {
   return (
-    <Content id="contact">
+    <Content id="contact" style={{ padding: 0, maxWidth: "100%" }}>
       <ContactContainer>
         <ContactContent>
           <ContactText>

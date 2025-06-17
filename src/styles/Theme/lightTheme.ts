@@ -12,6 +12,7 @@ export const lightTheme: DefaultTheme = {
     contrastSecondary: pallet.white,
     contrastTertiary: "#4f46e5",
     contrastQuaternary: pallet.blue250,
+    contrastSextary: pallet.yellow200,
 
     intensity100: pallet.violet100,
     intensity200: pallet.gray200,
@@ -24,7 +25,7 @@ export const lightTheme: DefaultTheme = {
     intensity900: pallet.blue900,
 
     primaryGradient:
-      "linear-gradient(180deg, " +
+      "linear-gradient(0deg, " +
       pallet.transparentViolet700Strong +
       " 50%, " +
       pallet.transparent +
@@ -42,6 +43,18 @@ export const lightTheme: DefaultTheme = {
       pallet.violet300 +
       " 50%, " +
       pallet.blue250 +
+      " 100%)",
+    tertiaryGradient:
+      "linear-gradient(0deg, " +
+      pallet.yellow100 +
+      " 50%, " +
+      pallet.transparent +
+      " 100%)",
+    quartenaryGradient:
+      "linear-gradient(180deg, " +
+      pallet.yellow100 +
+      " 20%, " +
+      pallet.yellow200 +
       " 100%)",
 
     background: pallet.violet300,
