@@ -52,14 +52,14 @@ export const TitleSections = styled(motion.h1)`
 `;
 
 export const BagImg1 = styled.div`
-  width: 2000px;
-  height: 2000px;
+  width: 2600px;
+  height: 2600px;
   background: ${(props) => props.theme.colors.primaryGradient};
   background-image: url("./images/blue.png");
   background-size: 110%;
   background-position: center;
   position: absolute;
-  opacity: 0.3;
+  opacity: 0.5;
   top: -100vh;
   left: -80%;
   z-index: 0;
@@ -105,7 +105,7 @@ export const BagImg2 = styled.div`
   background-size: 110%;
   background-position: center;
   position: absolute;
-  opacity: 0.2;
+  opacity: 0.3;
   top: -200vh;
   left: 20%;
   z-index: 0;
@@ -124,7 +124,7 @@ export const BagImg2Body = styled.div`
   width: 2000px;
   height: 2000px;
   background: ${(props) => props.theme.colors.primaryGradient};
-  background-image: url("../images/pink.png");
+
   background-size: 110%;
   background-position: center;
   position: absolute;
@@ -133,6 +133,11 @@ export const BagImg2Body = styled.div`
   left: 20%;
   z-index: 0;
   mix-blend-mode: multiply;
+  -webkit-mask-image: url("../images/pink.png");
+  mask-image: url("./images/pink.svg");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
 
   @media (max-width: 768px) {
     width: 1500px;
@@ -151,7 +156,7 @@ export const BagImg3 = styled.div`
   background-size: 110%;
   background-position: center;
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.9;
   top: 0%;
   left: 60%;
   z-index: 0;
@@ -195,8 +200,8 @@ export const BagImg4 = styled.div`
   background-size: 110%;
   background-position: center;
   position: absolute;
-  opacity: 0.9;
-  top: -180vh;
+  opacity: 0.4;
+  top: -100vh;
   left: 0%;
   z-index: 0;
   mix-blend-mode: multiply;
