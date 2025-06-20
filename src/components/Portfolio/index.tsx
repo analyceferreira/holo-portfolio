@@ -72,9 +72,9 @@ const PortfolioItens: PortfolioItemProps[] = [
     github: "https://github.com/analyceferreira/ecommerce-pi",
     techs: ["EJS", "Node", "Postgres", "Express", "Figma"],
     images: [
-      "./portfolio-assets/ecommerce/2.png",
       "./portfolio-assets/ecommerce/1.png",
       "./portfolio-assets/ecommerce/3.png",
+      "./portfolio-assets/ecommerce/2.png",
     ],
   },
   {
