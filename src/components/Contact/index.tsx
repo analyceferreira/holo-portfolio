@@ -24,7 +24,7 @@ const ContactSection: React.FC = () => {
             <ContactAsset2 />
             <ContactAsset3 />
             <ContactMessage>
-              <p>Whant to start a project?</p>
+              <p>Want to start a project?</p>
             </ContactMessage>
           </ContactText>
 

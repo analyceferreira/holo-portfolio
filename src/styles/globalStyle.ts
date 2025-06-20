@@ -1,15 +1,15 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from "styled-components";
 
-export default  createGlobalStyle`
+export default createGlobalStyle`
     * {
         box-sizing: border-box;
         margin: 0;
         outline: 0;
-        color: ${props => props.theme.colors.contrast};      
+        color: ${(props) => props.theme.colors.contrast};      
     }
 
     body {
-        font-family: ${props => props.theme.fontSizes}, sans-serif;
+        font-family: ${(props) => props.theme.fontSizes}, sans-serif;
         -webkit-font-smoothing: antialiased;
         scroll-behavior: smooth;
         overflow-x: hidden;
@@ -132,4 +132,4 @@ export default  createGlobalStyle`
     }
 
 
-`
+`;
