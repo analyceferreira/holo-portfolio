@@ -33,8 +33,12 @@ export const TextContainer = styled.div`
     }
 
     @media (max-width: 600px) {
-      top: 0;
+      top: 50px;
       transform: translateX(40%);
+    }
+
+    @media (max-width: 445px) {
+      transform: translateX(50%);
     }
     @media (max-width: 400px) {
       width: 100%;

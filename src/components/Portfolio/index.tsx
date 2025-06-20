@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { TitleSections } from "../../App/styles";
 import {
   PortfolioContainer,
@@ -182,19 +182,21 @@ const PortfolioSection: React.FC = () => {
                 </PortfolioCardHeader>
                 <PortfolioBrowsersImages>
                   {item.images.map((image, index) => (
-                    <BrowseImage
-                      className="browser-mockup"
-                      onClick={(e) => {
-                        setOpenImageModal(true);
-                        setImagesModal(item.images);
-                        setInitialIndex(index);
-                      }}
-                      image={image}
-                    >
-                      <div key={index}>
-                        <img src={image} />
-                      </div>
-                    </BrowseImage>
+                    <Suspense fallback={<div>Loading...</div>} key={index}>
+                      <BrowseImage
+                        className="browser-mockup"
+                        onClick={(e) => {
+                          setOpenImageModal(true);
+                          setImagesModal(item.images);
+                          setInitialIndex(index);
+                        }}
+                        image={image}
+                      >
+                        <div key={index}>
+                          <img src={image} />
+                        </div>
+                      </BrowseImage>
+                    </Suspense>
                   ))}
                 </PortfolioBrowsersImages>
               </PortfolioCard>

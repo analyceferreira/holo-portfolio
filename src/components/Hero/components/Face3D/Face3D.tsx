@@ -47,6 +47,9 @@ export default function Face3D() {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
+    document.getElementById("canvas")?.removeEventListener("wheel", (e) => {
+      e.preventDefault();
+    });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -57,7 +60,13 @@ export default function Face3D() {
     <Container>
       <SceneContainer>
         <Suspense>
-          <Spline scene="https://prod.spline.design/xwgjuT3XdlHHXEnb/scene.splinecode" />
+          <Spline
+            onClick={() => {
+              console.log("Clicked on the 3D scene");
+            }}
+            scene="https://prod.spline.design/xwgjuT3XdlHHXEnb/scene.splinecode"
+            style={window.innerWidth < 768 ? { pointerEvents: "none" } : {}}
+          />
         </Suspense>
       </SceneContainer>
     </Container>

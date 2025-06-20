@@ -25,6 +25,7 @@ export const ContainerBg = styled.div`
 export const TitleSections = styled(motion.h1)`
   ${({ theme }) => css`
     width: max-content;
+    max-width: 100%;
     ${theme.textVariants.h3};
     color: ${theme.colors.contrast};
     position: relative;
