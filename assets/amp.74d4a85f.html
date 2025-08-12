@@ -581,6 +581,15 @@
     </style>
   </head>
   <body>
+    <!-- AMP State for Dynamic Year -->
+    <amp-state id="appState">
+      <script type="application/json">
+        {
+          "currentYear": 2024
+        }
+      </script>
+    </amp-state>
+
     <!-- Header -->
     <header class="header">
       <nav class="nav">
@@ -777,8 +786,8 @@
     <!-- Footer -->
     <footer class="footer">
       <p>
-        &copy; <span [text]="currentYear"></span> Analyce Ferreira. All rights
-        reserved.
+        &copy; <span [text]="appState.currentYear"></span> Analyce Ferreira. All
+        rights reserved.
       </p>
       <div class="social-links">
         <a
@@ -819,15 +828,15 @@
       </script>
     </amp-analytics>
 
-    <!-- Dynamic Year Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+    <!-- Dynamic Year Update -->
+    <amp-script layout="container" script="updateYear">
+      <script type="text/plain" target="amp-script" id="updateYear">
         const currentYear = new Date().getFullYear();
-        const yearElement = document.querySelector('[text]="currentYear"]');
+        const yearElement = document.querySelector('[text="appState.currentYear"]');
         if (yearElement) {
           yearElement.textContent = currentYear;
         }
-      });
-    </script>
+      </script>
+    </amp-script>
   </body>
 </html>
