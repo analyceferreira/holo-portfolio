@@ -776,10 +776,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <p>
-        &copy; <span [text]="currentYear"></span> Analyce Ferreira. All rights
-        reserved.
-      </p>
+      <p>&copy; 2025 Analyce Ferreira. All rights reserved.</p>
       <div class="social-links">
         <a
           href="https://linkedin.com/in/analyceferreira"
@@ -818,16 +815,5 @@
         }
       </script>
     </amp-analytics>
-
-    <!-- Dynamic Year Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const currentYear = new Date().getFullYear();
-        const yearElement = document.querySelector('[text]="currentYear"]');
-        if (yearElement) {
-          yearElement.textContent = currentYear;
-        }
-      });
-    </script>
   </body>
 </html>

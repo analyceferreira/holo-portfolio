@@ -8,12 +8,14 @@
     "build": "vite build",
     "build:amp": "vite build --config vite.config.amp.js",
     "build:amp:full": "node scripts/build-amp.js",
+    "build:performance": "vite build --config vite.config.performance.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "validate:amp": "node validate-amp.js",
     "lighthouse": "lighthouse dist/index.html --output html --output-path ./lighthouse-report.html",
-    "analyze": "npm run build && npm run lighthouse"
+    "analyze": "npm run build && npm run lighthouse",
+    "analyze:performance": "npm run build:performance && npm run lighthouse"
   },
   "dependencies": {
     "@motionone/utils": "^10.17.0",
@@ -39,6 +41,8 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.0",
     "terser": "^5.43.1",
     "typescript": "4.7",
     "vite": "^3.2.3"
