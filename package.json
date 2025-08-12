@@ -6,9 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:amp": "vite build --config vite.config.amp.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "validate:amp": "node validate-amp.js",
+    "lighthouse": "lighthouse dist/index.html --output html --output-path ./lighthouse-report.html",
+    "analyze": "npm run build && npm run lighthouse"
   },
   "dependencies": {
     "@motionone/utils": "^10.17.0",
