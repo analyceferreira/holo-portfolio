@@ -322,7 +322,6 @@ export const BgNoise = styled.div`
   width: 100vw;
   height: 100%;
   background: ${(props) => props.theme.colors.primaryGradient};
-  background-image: url("./images/noise-texture.jpg");
   background-size: 110%;
   background-position: center;
   position: fixed;

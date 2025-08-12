@@ -69,7 +69,35 @@ export default function About() {
           <ImageContainer>
             <Spline
               scene="https://prod.spline.design/ULChLSDjxFKAJuDa/scene.splinecode"
-              style={window.innerWidth < 768 ? { pointerEvents: "none" } : {}}
+              onClick={(event) => {
+                console.log("Clicked on the ABOUT scene");
+                console.log(event.button);
+                console.log(event.target);
+                console.log(event.currentTarget);
+                console.log(event);
+                console.log(event.nativeEvent);
+                console.log(event.nativeEvent.target);
+                console.log(event.nativeEvent.currentTarget);
+                console.log(event.nativeEvent.buttons);
+                if (event.nativeEvent.buttons === 1) {
+                  console.log("Left button clicked");
+                }
+                if (event.nativeEvent.buttons === 2) {
+                  console.log("Right button clicked");
+                }
+                if (event.nativeEvent.buttons === 4) {
+                  console.log("Middle button clicked");
+                }
+                if (event.nativeEvent.buttons === 0) {
+                  console.log("No button clicked");
+                }
+                console.log(event.relatedTarget);
+                if (event.relatedTarget) {
+                  console.log("Related target:", event.relatedTarget);
+                }
+                console.log(event.detail);
+              }}
+              onWheel={(e) => e.target.name}
             />
           </ImageContainer>
           <InfoContainer selected={selected} />

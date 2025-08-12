@@ -7,7 +7,7 @@ import { Euler, Vector3 } from "three";
 
 import { Container, SceneContainer } from "./styles.js";
 import { MathUtils } from "three";
-import Spline from "@splinetool/react-spline";
+const LazySpline = React.lazy(() => import("@splinetool/react-spline"));
 
 function RigCamera() {
   const { camera, mouse } = useThree();
@@ -41,31 +41,18 @@ function RigCamera() {
 export default function Face3D() {
   const [mousePos, setMousePos] = useState({});
 
-  useEffect(() => {
-    const handleMouseMove = (event: { clientX: any; clientY: any }) => {
-      setMousePos({ x: event.clientX, y: event.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    document.getElementById("canvas")?.removeEventListener("wheel", (e) => {
-      e.preventDefault();
-    });
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
   return (
     <Container>
       <SceneContainer>
         <Suspense>
-          <Spline
-            onClick={() => {
-              console.log("Clicked on the 3D scene");
-            }}
+          <LazySpline
+            id="spline"
             scene="https://prod.spline.design/xwgjuT3XdlHHXEnb/scene.splinecode"
-            style={window.innerWidth < 768 ? { pointerEvents: "none" } : {}}
+            style={
+              /android/i.test(navigator.userAgent)
+                ? { pointerEvents: "none" }
+                : {}
+            }
           />
         </Suspense>
       </SceneContainer>

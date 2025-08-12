@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://analyceferreira.github.io/holo-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
